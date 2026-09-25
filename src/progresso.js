@@ -26,6 +26,33 @@ export function marcarResolvida(chave) {
   }
 }
 
+// ---------- Lições de teoria lidas ----------
+const CHAVE_LIDAS = 'curso-py:licoes-lidas'
+
+function lerLidas() {
+  try {
+    return JSON.parse(localStorage.getItem(CHAVE_LIDAS)) ?? {}
+  } catch {
+    return {}
+  }
+}
+
+export function estaLida(licaoId) {
+  return Boolean(lerLidas()[licaoId])
+}
+
+export function marcarLida(licaoId, lida) {
+  try {
+    const lidas = lerLidas()
+    if (lida) lidas[licaoId] = true
+    else delete lidas[licaoId]
+    localStorage.setItem(CHAVE_LIDAS, JSON.stringify(lidas))
+  } catch {
+    // sem localStorage: ignora
+  }
+}
+
+// ---------- Código de cada questão ----------
 export function lerCodigo(chave) {
   try {
     return localStorage.getItem(PREFIXO_CODIGO + chave)

@@ -32,6 +32,12 @@ export default function Inicio() {
         <p className="banner-selo">★ Python do básico ao avançado{' '}★</p>
         <h1>Curso_Py</h1>
         <p>Escolha um assunto, resolva as questões e confira na hora se acertou.</p>
+        <p className="banner-acoes">
+          <Link to="/teoria" className="botao botao-principal">
+            📖 Estudar teoria
+          </Link>
+          <span>Começando agora? Leia a lição “Olá, mundo!” primeiro.</span>
+        </p>
       </BannerEUA>
 
       <label className="busca">

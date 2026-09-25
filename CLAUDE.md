@@ -21,6 +21,7 @@ As questões vêm do repositório `Carlos-Kaynan/Curso_Py`.
 ```powershell
 npm run dev        # http://localhost:5173
 npm run questoes   # regenera src/data/questoes.json (rode depois de mexer em questoes/)
+npm run teoria     # confere as saídas dos exemplos das lições (rode depois de mexer em src/data/teoria/)
 npm run build
 npm run lint
 ```
@@ -33,4 +34,7 @@ npm run lint
 - `src/python/executor.js`: fala com o worker e aplica o tempo limite (5 s) matando e recriando o worker.
 - `src/python/comparar.js`: compara saídas ignorando espaços no fim das linhas e linhas vazias no final.
 - Rotas com `HashRouter` (funciona no GitHub Pages sem configuração); `vite.config.js` usa `base: './'` e `worker.format: 'es'`.
-- Progresso em `localStorage` (`src/progresso.js`), com as chaves `curso-py:resolvidas` e `curso-py:codigo:<assunto>/<questao>`.
+- Progresso em `localStorage` (`src/progresso.js`), com as chaves `curso-py:resolvidas`, `curso-py:licoes-lidas` e `curso-py:codigo:<assunto>/<questao>`.
+- Teoria: lições em `src/data/teoria/*.js` como listas de blocos (`titulo`, `texto`, `lista`, `codigo`, `dica`, `cuidado`, `resumo`; formato documentado em `01-primeiros-passos.js`). Texto aceita `código` e **negrito** (`TextoRico.jsx`). Blocos de código são coloridos com `@lezer/python` + `@lezer/highlight` (`BlocoCodigo.jsx`), sem carregar o CodeMirror. `scripts/conferir-teoria.mjs` roda cada exemplo no Pyodide e compara com a `saida` escrita (em `erro: true`, compara com a última linha do traceback).
+- Visual com tema dos EUA: cores em variáveis no começo de `src/index.css`; fontes Bebas Neue (títulos) + Inter (texto); banner SVG em `src/components/BannerEUA.jsx`.
+- Páginas `Questao`, `Teoria` e `Licao` são carregadas com `React.lazy` (ver `App.jsx`).
