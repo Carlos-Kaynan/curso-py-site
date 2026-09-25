@@ -32,13 +32,24 @@ export default function Inicio() {
         <p className="banner-selo">★ Python do básico ao avançado{' '}★</p>
         <h1>Curso_Py</h1>
         <p>Escolha um assunto, resolva as questões e confira na hora se acertou.</p>
-        <p className="banner-acoes">
-          <Link to="/teoria" className="botao botao-principal">
-            📖 Estudar teoria
-          </Link>
-          <span>Começando agora? Leia a lição “Olá, mundo!” primeiro.</span>
-        </p>
       </BannerEUA>
+
+      {/* Destaque da teoria: fica entre o banner e as questões, para ser a primeira coisa que o aluno vê. */}
+      <section className="destaque-teoria">
+        <span className="destaque-teoria-icone" aria-hidden="true">
+          📖
+        </span>
+        <div className="destaque-teoria-texto">
+          <h2>Comece pela teoria</h2>
+          <p>
+            Lições curtas para ler, do <strong>“Olá, mundo!”</strong> até funções, com exemplos e dicas. Começando agora? Leia antes de
+            resolver as questões.
+          </p>
+        </div>
+        <Link to="/teoria" className="botao botao-principal botao-grande">
+          Estudar teoria →
+        </Link>
+      </section>
 
       <label className="busca">
         <svg viewBox="0 0 24 24" aria-hidden="true">
