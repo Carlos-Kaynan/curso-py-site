@@ -1,5 +1,6 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
+import BannerEUA from '../components/BannerEUA.jsx'
 import Dificuldade from '../components/Dificuldade.jsx'
 import IconeStatus from '../components/IconeStatus.jsx'
 import { assuntos, chaveDaQuestao } from '../data/assuntos.js'
@@ -27,6 +28,12 @@ export default function Inicio() {
 
   return (
     <div className="pagina">
+      <BannerEUA>
+        <p className="banner-selo">★ Python do básico ao avançado{' '}★</p>
+        <h1>Curso_Py</h1>
+        <p>Escolha um assunto, resolva as questões e confira na hora se acertou.</p>
+      </BannerEUA>
+
       <label className="busca">
         <svg viewBox="0 0 24 24" aria-hidden="true">
           <circle cx="10.5" cy="10.5" r="6.5" fill="none" stroke="currentColor" strokeWidth="2" />
@@ -39,9 +46,6 @@ export default function Inicio() {
           onChange={(evento) => setBusca(evento.target.value)}
         />
       </label>
-
-      <h1>Curso_Py</h1>
-      <p className="subtitulo">Python do básico ao avançado. Escolha um assunto, resolva as questões e confira na hora se acertou.</p>
 
       {termo ? (
         <div className="cartao">

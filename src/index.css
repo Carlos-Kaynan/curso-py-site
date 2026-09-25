@@ -1,27 +1,26 @@
-/* Cores e fontes usadas no site inteiro ("variáveis" de CSS). */
+/* Cores e fontes usadas no site inteiro ("variáveis" de CSS).
+   As cores principais são as oficiais da bandeira dos Estados Unidos. */
 :root {
-  --azul: #16284a;
-  --azul-claro: #24407a;
-  --dourado: #f0c14b;
-  --dourado-texto: #b8860b;
-  --verde: #2e9a5c;
-  --laranja: #ef7f3a;
-  --vermelho: #d4453a;
-  --fundo: #f6f7f9;
+  --azul: #3c3b6e; /* "Old Glory Blue" */
+  --azul-escuro: #1f1e4d;
+  --azul-medio: #3b6fc4;
+  --azul-fundo: #eef1fb;
+  --vermelho: #b22234; /* "Old Glory Red" */
+  --vermelho-claro: #e7a9b1;
+  --verde: #2e9a5c; /* só para "resolvida" e "aceito" */
+  --fundo: #f5f6fa;
   --cartao: #ffffff;
-  --texto: #1d1d1f;
-  --texto-suave: #6d6d76;
-  --borda: #e3e3e8;
-  --sombra: 0 4px 24px rgba(22, 40, 74, 0.08);
+  --texto: #1d1d2b;
+  --texto-suave: #62627a;
+  --borda: #dcdfe9;
+  --sombra: 0 4px 24px rgba(60, 59, 110, 0.12);
   --raio: 14px;
 
-  --fonte-texto: 'Raleway', system-ui, sans-serif;
-  --fonte-titulo: 'Rubik', system-ui, sans-serif;
+  --fonte-texto: 'Inter', system-ui, sans-serif;
+  --fonte-titulo: 'Bebas Neue', 'Arial Narrow', sans-serif;
   --fonte-codigo: ui-monospace, 'Cascadia Code', Consolas, monospace;
 
   font-family: var(--fonte-texto);
-  /* A Raleway desenha números "baixinhos" por padrão; isto deixa todos da mesma altura. */
-  font-variant-numeric: lining-nums;
   color: var(--texto);
   background: var(--fundo);
   line-height: 1.5;
@@ -42,8 +41,10 @@ h1,
 h2,
 h3 {
   font-family: var(--fonte-titulo);
+  font-weight: 400; /* a Bebas Neue só tem um peso, que já é "negrito" */
+  letter-spacing: 0.03em;
   color: var(--azul);
-  line-height: 1.2;
+  line-height: 1.1;
 }
 
 a {

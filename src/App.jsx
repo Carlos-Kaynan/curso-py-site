@@ -14,9 +14,13 @@ export default function App() {
     <>
       <header className="topo">
         <Link to="/" className="logo">
+          <span className="logo-estrela" aria-hidden="true">
+            ★
+          </span>
           Curso<span>_Py</span>
         </Link>
       </header>
+      <div className="faixa-listrada" aria-hidden="true" />
       <main>
         <Suspense fallback={<p className="pagina">Carregando…</p>}>
           <Routes>
