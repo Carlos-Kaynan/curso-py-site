@@ -1,0 +1,2205 @@
+{
+  "assuntos": [
+    {
+      "id": "conceitos-basicos",
+      "numero": 1,
+      "titulo": "Conceitos básicos",
+      "descricao": "Variáveis, operadores, input() e print().",
+      "questoes": [
+        {
+          "id": "troca-de-valores",
+          "letra": "A",
+          "titulo": "Troca de valores",
+          "dificuldade": "facil",
+          "peso": 1,
+          "enunciado": "Escreva um programa que permute (troque) o valor de duas variáveis inteiras.",
+          "entrada": {
+            "texto": "O input será composto por dois números inteiros:",
+            "itens": [
+              "a -> inteiro",
+              "b -> inteiro"
+            ]
+          },
+          "saida": {
+            "texto": "A saída será os valores de a e b após a troca de valores:",
+            "itens": [
+              "Valor de a após permutação: {a}",
+              "Valor de b após permutação: {b}"
+            ]
+          },
+          "observacoes": [],
+          "exemplos": [
+            {
+              "entrada": "45\n50\n",
+              "saida": "Valor de a após permutação: 50\nValor de b após permutação: 45\n"
+            }
+          ],
+          "testes": [
+            {
+              "entrada": "1\n2\n",
+              "saida": "Valor de a após permutação: 2\nValor de b após permutação: 1\n"
+            },
+            {
+              "entrada": "-7\n100\n",
+              "saida": "Valor de a após permutação: 100\nValor de b após permutação: -7\n"
+            },
+            {
+              "entrada": "0\n0\n",
+              "saida": "Valor de a após permutação: 0\nValor de b após permutação: 0\n"
+            }
+          ]
+        },
+        {
+          "id": "qual-o-meu-lucro",
+          "letra": "B",
+          "titulo": "Qual o meu lucro?",
+          "dificuldade": "facil",
+          "peso": 1,
+          "enunciado": "Escreva um programa que, a partir de um valor de custo e de um valor de venda, mostre o valor do lucro obtido com a venda do produto.",
+          "entrada": {
+            "texto": "As entradas serão as seguintes:",
+            "itens": [
+              "custo -> float",
+              "venda -> float"
+            ]
+          },
+          "saida": {
+            "texto": "A saída deverá ser:",
+            "itens": [
+              "O lucro obtido foi R$ {lucro}."
+            ]
+          },
+          "observacoes": [
+            "lucro deverá ter 2 casas decimais."
+          ],
+          "exemplos": [
+            {
+              "entrada": "2\n15\n",
+              "saida": "O lucro obtido foi R$ 13.00.\n"
+            }
+          ],
+          "testes": [
+            {
+              "entrada": "10.5\n20\n",
+              "saida": "O lucro obtido foi R$ 9.50.\n"
+            },
+            {
+              "entrada": "100\n99.99\n",
+              "saida": "O lucro obtido foi R$ -0.01.\n"
+            },
+            {
+              "entrada": "0\n0\n",
+              "saida": "O lucro obtido foi R$ 0.00.\n"
+            }
+          ]
+        },
+        {
+          "id": "idade-em-meses-e-dias",
+          "letra": "C",
+          "titulo": "Idade em meses e dias",
+          "dificuldade": "facil",
+          "peso": 1,
+          "enunciado": "Escreva um programa que receba o nome de uma pessoa e sua idade em anos. O programa deve calcular e exibir a idade da pessoa em meses e dias.",
+          "entrada": {
+            "texto": "A entrada será formada por:",
+            "itens": [
+              "nome -> string",
+              "idade_anos -> inteiro"
+            ]
+          },
+          "saida": {
+            "texto": "A saída deverá ser:",
+            "itens": [
+              "{nome} tem {idade_anos} anos ou {idade_meses} meses ou ainda {idade_dias} dias!"
+            ]
+          },
+          "observacoes": [
+            "Considere que um ano tem 12 meses e 365 dias."
+          ],
+          "exemplos": [
+            {
+              "entrada": "Charlote\n14\n",
+              "saida": "Charlote tem 14 anos ou 168 meses ou ainda 5110 dias!\n"
+            }
+          ],
+          "testes": [
+            {
+              "entrada": "Ana\n1\n",
+              "saida": "Ana tem 1 anos ou 12 meses ou ainda 365 dias!\n"
+            },
+            {
+              "entrada": "Carlos Kaynan\n25\n",
+              "saida": "Carlos Kaynan tem 25 anos ou 300 meses ou ainda 9125 dias!\n"
+            },
+            {
+              "entrada": "Bebê\n0\n",
+              "saida": "Bebê tem 0 anos ou 0 meses ou ainda 0 dias!\n"
+            }
+          ]
+        },
+        {
+          "id": "volume-do-cilindro",
+          "letra": "D",
+          "titulo": "Volume do cilindro",
+          "dificuldade": "facil",
+          "peso": 1,
+          "enunciado": "Faça um programa que leia a altura e o raio de um cilindro, calcule o volume total do cilindro (use π = 3.14) e exiba esse valor.",
+          "entrada": {
+            "texto": "As entradas serão as seguintes:",
+            "itens": [
+              "altura -> float",
+              "raio -> float"
+            ]
+          },
+          "saida": {
+            "texto": "A saída deverá ser:",
+            "itens": [
+              "O volume do cilindro que tem {altura} de altura e {raio} de raio é igual a {volume}"
+            ]
+          },
+          "observacoes": [
+            "Volume do cilindro = π × raio² × altura, com π = 3.14.",
+            "altura e raio aparecem como float (ex.: 2.0); o volume deve ter 2 casas decimais."
+          ],
+          "exemplos": [
+            {
+              "entrada": "2\n3\n",
+              "saida": "O volume do cilindro que tem 2.0 de altura e 3.0 de raio é igual a 56.52\n"
+            }
+          ],
+          "testes": [
+            {
+              "entrada": "10\n1.5\n",
+              "saida": "O volume do cilindro que tem 10.0 de altura e 1.5 de raio é igual a 70.65\n"
+            },
+            {
+              "entrada": "0.5\n4\n",
+              "saida": "O volume do cilindro que tem 0.5 de altura e 4.0 de raio é igual a 25.12\n"
+            },
+            {
+              "entrada": "7\n7\n",
+              "saida": "O volume do cilindro que tem 7.0 de altura e 7.0 de raio é igual a 1077.02\n"
+            }
+          ]
+        },
+        {
+          "id": "temperatura-em-kfc",
+          "letra": "E",
+          "titulo": "Temperatura em K e °F",
+          "dificuldade": "facil",
+          "peso": 1,
+          "enunciado": "Crie um programa que receba uma temperatura em Celsius e exiba a temperatura lida nas escalas Kelvin (K) e Fahrenheit (F).\n\nConsidere as seguintes fórmulas:\nK = C + 273\nF = 1,8 × C + 32",
+          "entrada": {
+            "texto": "A entrada será da seguinte maneira:",
+            "itens": [
+              "temperatura_celsius -> float"
+            ]
+          },
+          "saida": {
+            "itens": [
+              "Temperatura em Kelvin: {temperatura_kelvin}K",
+              "Temperatura em Fahrenheit: {temperatura_fahrenheit}ºF"
+            ]
+          },
+          "observacoes": [
+            "temperatura_kelvin e temperatura_fahrenheit devem ter 2 casas decimais."
+          ],
+          "exemplos": [
+            {
+              "entrada": "25\n",
+              "saida": "Temperatura em Kelvin: 298.00K\nTemperatura em Fahrenheit: 77.00ºF\n"
+            }
+          ],
+          "testes": [
+            {
+              "entrada": "0\n",
+              "saida": "Temperatura em Kelvin: 273.00K\nTemperatura em Fahrenheit: 32.00ºF\n"
+            },
+            {
+              "entrada": "-40\n",
+              "saida": "Temperatura em Kelvin: 233.00K\nTemperatura em Fahrenheit: -40.00ºF\n"
+            },
+            {
+              "entrada": "36.6\n",
+              "saida": "Temperatura em Kelvin: 309.60K\nTemperatura em Fahrenheit: 97.88ºF\n"
+            }
+          ]
+        },
+        {
+          "id": "valor-final-do-produto",
+          "letra": "F",
+          "titulo": "Valor final do produto",
+          "dificuldade": "facil",
+          "peso": 1,
+          "enunciado": "Escreva um programa que leia um valor de custo e o percentual de lucro desejado e, na sequência, mostre o valor final do produto.",
+          "entrada": {
+            "texto": "As entradas serão da seguinte forma:",
+            "itens": [
+              "custo -> float",
+              "percentual -> float"
+            ]
+          },
+          "saida": {
+            "texto": "A saída deverá ser:",
+            "itens": [
+              "Valor final do produto: R$ {valor_final}."
+            ]
+          },
+          "observacoes": [
+            "valor_final deverá ter 4 casas decimais."
+          ],
+          "exemplos": [
+            {
+              "entrada": "100\n10\n",
+              "saida": "Valor final do produto: R$ 110.0000.\n"
+            }
+          ],
+          "testes": [
+            {
+              "entrada": "59.9\n25\n",
+              "saida": "Valor final do produto: R$ 74.8750.\n"
+            },
+            {
+              "entrada": "10\n0\n",
+              "saida": "Valor final do produto: R$ 10.0000.\n"
+            },
+            {
+              "entrada": "3.33\n33.3\n",
+              "saida": "Valor final do produto: R$ 4.4389.\n"
+            }
+          ]
+        },
+        {
+          "id": "horas-de-trabalho",
+          "letra": "G",
+          "titulo": "Quanto ganho por hora?",
+          "dificuldade": "facil",
+          "peso": 1,
+          "enunciado": "Escreva um programa que leia o salário de uma pessoa, quantas horas ela trabalha por dia e quantos dias ela trabalhou no mês. Em seguida, calcule e exiba quanto essa pessoa recebe por hora.",
+          "entrada": {
+            "texto": "As entradas serão:",
+            "itens": [
+              "salario -> float",
+              "horas_por_dia -> inteiro",
+              "dias_trabalhados -> inteiro"
+            ]
+          },
+          "saida": {
+            "texto": "A saída deve ser da seguinte maneira:",
+            "itens": [
+              "Eu recebo uma mixuruca de R$ {valor_hora} por hora trabalhada."
+            ]
+          },
+          "observacoes": [
+            "valor_hora deve ter apenas uma casa decimal."
+          ],
+          "exemplos": [
+            {
+              "entrada": "2200\n8\n22\n",
+              "saida": "Eu recebo uma mixuruca de R$ 12.5 por hora trabalhada.\n"
+            }
+          ],
+          "testes": [
+            {
+              "entrada": "1412\n8\n20\n",
+              "saida": "Eu recebo uma mixuruca de R$ 8.8 por hora trabalhada.\n"
+            },
+            {
+              "entrada": "5000\n6\n25\n",
+              "saida": "Eu recebo uma mixuruca de R$ 33.3 por hora trabalhada.\n"
+            },
+            {
+              "entrada": "3000.50\n7\n21\n",
+              "saida": "Eu recebo uma mixuruca de R$ 20.4 por hora trabalhada.\n"
+            }
+          ]
+        },
+        {
+          "id": "distancia-da-nota-10",
+          "letra": "H",
+          "titulo": "Distância da nota 10",
+          "dificuldade": "medio",
+          "peso": 2,
+          "enunciado": "Escreva um programa que leia as 2 notas de um aluno em uma disciplina e depois exiba quantos pontos o aluno ficou distante da nota 10 em cada avaliação, sua média e quantos pontos a média ficou distante da nota 10.",
+          "entrada": {
+            "texto": "O input será composto por dois números, que representam a nota 1 e a nota 2 do aluno:",
+            "itens": [
+              "nota1 -> float",
+              "nota2 -> float"
+            ]
+          },
+          "saida": {
+            "texto": "A saída terá 4 linhas, nesta ordem:",
+            "itens": [
+              "Distância da nota 1 para 10",
+              "Distância da nota 2 para 10",
+              "Média",
+              "Distância da média para 10"
+            ]
+          },
+          "observacoes": [
+            "Exiba os números do jeito que o Python mostra um float, sem formatar (ex.: 2.5)."
+          ],
+          "exemplos": [
+            {
+              "entrada": "7.5\n8.5\n",
+              "saida": "2.5\n1.5\n8.0\n2.0\n"
+            }
+          ],
+          "testes": [
+            {
+              "entrada": "10\n10\n",
+              "saida": "0.0\n0.0\n10.0\n0.0\n"
+            },
+            {
+              "entrada": "5\n6\n",
+              "saida": "5.0\n4.0\n5.5\n4.5\n"
+            },
+            {
+              "entrada": "9.5\n4.5\n",
+              "saida": "0.5\n5.5\n7.0\n3.0\n"
+            }
+          ]
+        },
+        {
+          "id": "faturamento-do-evento",
+          "letra": "I",
+          "titulo": "Faturamento do evento",
+          "dificuldade": "medio",
+          "peso": 2,
+          "enunciado": "Em um evento foram vendidos dois tipos de ingresso: meia-entrada (custa metade do valor do ingresso inteiro) e inteira (valor cheio).\n\nEscreva um programa que leia a quantidade total de ingressos vendidos, o percentual de ingressos vendidos como meia-entrada (o restante é inteira) e o valor do ingresso inteiro.\n\nO programa deve calcular e exibir a quantidade de ingressos de cada tipo, o valor faturado com cada tipo e o valor total arrecadado.",
+          "entrada": {
+            "texto": "O input será composto por três valores:",
+            "itens": [
+              "total_ingressos -> inteiro",
+              "percentual_meia -> inteiro",
+              "valor_inteira -> float"
+            ]
+          },
+          "saida": {
+            "texto": "O output será da seguinte forma:",
+            "itens": [
+              "Quantidade de ingressos meia-entrada: {total_meia}",
+              "Quantidade de ingressos inteiros: {total_inteira}",
+              "Faturamento com meia-entrada: R${faturamento_meia}",
+              "Faturamento com inteira: R${faturamento_inteira}",
+              "Faturamento total: R${faturamento_total}"
+            ]
+          },
+          "observacoes": [
+            "As quantidades de ingressos são exibidas sem casas decimais.",
+            "Os faturamentos devem ter 2 casas decimais."
+          ],
+          "exemplos": [
+            {
+              "entrada": "100\n40\n50\n",
+              "saida": "Quantidade de ingressos meia-entrada: 40\nQuantidade de ingressos inteiros: 60\nFaturamento com meia-entrada: R$1000.00\nFaturamento com inteira: R$3000.00\nFaturamento total: R$4000.00\n"
+            }
+          ],
+          "testes": [
+            {
+              "entrada": "200\n25\n80.5\n",
+              "saida": "Quantidade de ingressos meia-entrada: 50\nQuantidade de ingressos inteiros: 150\nFaturamento com meia-entrada: R$2012.50\nFaturamento com inteira: R$12075.00\nFaturamento total: R$14087.50\n"
+            },
+            {
+              "entrada": "10\n0\n30\n",
+              "saida": "Quantidade de ingressos meia-entrada: 0\nQuantidade de ingressos inteiros: 10\nFaturamento com meia-entrada: R$0.00\nFaturamento com inteira: R$300.00\nFaturamento total: R$300.00\n"
+            },
+            {
+              "entrada": "50\n100\n20\n",
+              "saida": "Quantidade de ingressos meia-entrada: 50\nQuantidade de ingressos inteiros: 0\nFaturamento com meia-entrada: R$500.00\nFaturamento com inteira: R$0.00\nFaturamento total: R$500.00\n"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "estruturas-condicionais",
+      "numero": 2,
+      "titulo": "Estruturas condicionais",
+      "descricao": "if, elif e else: fazendo o programa tomar decisões.",
+      "questoes": [
+        {
+          "id": "categoria-do-atleta",
+          "letra": "A",
+          "titulo": "Categoria do atleta",
+          "dificuldade": "facil",
+          "peso": 1,
+          "enunciado": "Faça um programa que leia o nome, o sobrenome e a idade de um atleta e exiba seu nome completo e se ele está na categoria infantil (menor de 12 anos), juvenil (entre 12 e 17 anos), adulta (entre 18 e 35 anos) ou master (acima de 35 anos).",
+          "entrada": {
+            "itens": [
+              "nome -> string",
+              "sobrenome -> string",
+              "idade -> inteiro"
+            ]
+          },
+          "saida": {
+            "texto": "Troque {categoria} por infantil, juvenil, adulta ou master:",
+            "itens": [
+              "A categoria do atleta {nome_completo} é a {categoria}."
+            ]
+          },
+          "observacoes": [
+            "O nome completo é o nome e o sobrenome separados por um espaço."
+          ],
+          "exemplos": [
+            {
+              "entrada": "Ana\nSilva\n10\n",
+              "saida": "A categoria do atleta Ana Silva é a infantil.\n"
+            },
+            {
+              "entrada": "Carlos\nKaynan\n36\n",
+              "saida": "A categoria do atleta Carlos Kaynan é a master.\n"
+            }
+          ],
+          "testes": [
+            {
+              "entrada": "João\nSouza\n12\n",
+              "saida": "A categoria do atleta João Souza é a juvenil.\n"
+            },
+            {
+              "entrada": "Maria\nLima\n17\n",
+              "saida": "A categoria do atleta Maria Lima é a juvenil.\n"
+            },
+            {
+              "entrada": "Pedro\nAlves\n18\n",
+              "saida": "A categoria do atleta Pedro Alves é a adulta.\n"
+            },
+            {
+              "entrada": "Rita\nCosta\n35\n",
+              "saida": "A categoria do atleta Rita Costa é a adulta.\n"
+            }
+          ]
+        },
+        {
+          "id": "qual-e-o-caractere",
+          "letra": "B",
+          "titulo": "Vogal, número ou operação?",
+          "dificuldade": "facil",
+          "peso": 1,
+          "enunciado": "Escreva um programa que leia um ÚNICO caractere e depois informe se ele é uma vogal, um número ou uma operação matemática (+, -, * ou /).",
+          "entrada": {
+            "itens": [
+              "caractere -> string"
+            ]
+          },
+          "saida": {
+            "itens": [
+              "O caractere é uma vogal",
+              "O caractere é um número",
+              "O caractere é uma operação matemática"
+            ]
+          },
+          "observacoes": [
+            "A vogal pode ser maiúscula ou minúscula.",
+            "Você pode usar o método isnumeric() do Python."
+          ],
+          "exemplos": [
+            {
+              "entrada": "a\n",
+              "saida": "O caractere é uma vogal\n"
+            },
+            {
+              "entrada": "7\n",
+              "saida": "O caractere é um número\n"
+            }
+          ],
+          "testes": [
+            {
+              "entrada": "E\n",
+              "saida": "O caractere é uma vogal\n"
+            },
+            {
+              "entrada": "*\n",
+              "saida": "O caractere é uma operação matemática\n"
+            },
+            {
+              "entrada": "/\n",
+              "saida": "O caractere é uma operação matemática\n"
+            },
+            {
+              "entrada": "0\n",
+              "saida": "O caractere é um número\n"
+            },
+            {
+              "entrada": "U\n",
+              "saida": "O caractere é uma vogal\n"
+            }
+          ]
+        },
+        {
+          "id": "calculadora",
+          "letra": "C",
+          "titulo": "Calculadora",
+          "dificuldade": "facil",
+          "peso": 1,
+          "enunciado": "Faça um programa que leia dois números (n1 e n2) e uma operação matemática (+, -, * ou /) e exiba o resultado dessa operação entre os dois números.",
+          "entrada": {
+            "itens": [
+              "n1 -> float",
+              "n2 -> float",
+              "operacao -> string"
+            ]
+          },
+          "saida": {
+            "texto": "Troque {nome_operacao} por adição, subtração, multiplicação ou divisão:",
+            "itens": [
+              "Você escolheu a operação de {nome_operacao}. O resultado dessa {nome_operacao} é {resultado}"
+            ]
+          },
+          "observacoes": [
+            "resultado deve ter 2 casas decimais."
+          ],
+          "exemplos": [
+            {
+              "entrada": "10\n5\n+\n",
+              "saida": "Você escolheu a operação de adição. O resultado dessa adição é 15.00\n"
+            },
+            {
+              "entrada": "7\n2\n/\n",
+              "saida": "Você escolheu a operação de divisão. O resultado dessa divisão é 3.50\n"
+            }
+          ],
+          "testes": [
+            {
+              "entrada": "10\n5\n-\n",
+              "saida": "Você escolheu a operação de subtração. O resultado dessa subtração é 5.00\n"
+            },
+            {
+              "entrada": "3\n2.5\n*\n",
+              "saida": "Você escolheu a operação de multiplicação. O resultado dessa multiplicação é 7.50\n"
+            },
+            {
+              "entrada": "1\n3\n/\n",
+              "saida": "Você escolheu a operação de divisão. O resultado dessa divisão é 0.33\n"
+            }
+          ]
+        },
+        {
+          "id": "media-salarial",
+          "letra": "D",
+          "titulo": "Média salarial",
+          "dificuldade": "medio",
+          "peso": 2,
+          "enunciado": "Faça um programa que leia a média salarial dos funcionários de uma empresa e, na sequência, o nome e o salário de um dos funcionários. Ao final, exiba o nome do funcionário e se o salário dele é maior, menor ou igual à média salarial.",
+          "entrada": {
+            "itens": [
+              "media_salarial -> float",
+              "nome_funcionario -> string",
+              "salario_funcionario -> float"
+            ]
+          },
+          "saida": {
+            "texto": "Se o salário for maior, menor ou igual à média, respectivamente:",
+            "itens": [
+              "{nome_funcionario} recebe R$ {diferenca} a mais do que a média salarial da empresa.",
+              "{nome_funcionario} recebe R$ -{diferenca} a menos do que a média salarial da empresa.",
+              "{nome_funcionario} recebe igual a média salarial da empresa."
+            ]
+          },
+          "observacoes": [
+            "diferenca é a distância entre o salário e a média (sempre positiva), com 2 casas decimais.",
+            "Repare que, no caso \"a menos\", aparece um sinal de menos antes da diferença."
+          ],
+          "exemplos": [
+            {
+              "entrada": "3000\nAna\n3500\n",
+              "saida": "Ana recebe R$ 500.00 a mais do que a média salarial da empresa.\n"
+            },
+            {
+              "entrada": "2500.50\nBruno\n2000\n",
+              "saida": "Bruno recebe R$ -500.50 a menos do que a média salarial da empresa.\n"
+            }
+          ],
+          "testes": [
+            {
+              "entrada": "4000\nCarla\n4000\n",
+              "saida": "Carla recebe igual a média salarial da empresa.\n"
+            },
+            {
+              "entrada": "1500\nDavi\n1499.99\n",
+              "saida": "Davi recebe R$ -0.01 a menos do que a média salarial da empresa.\n"
+            },
+            {
+              "entrada": "10000\nEva\n12345.67\n",
+              "saida": "Eva recebe R$ 2345.67 a mais do que a média salarial da empresa.\n"
+            }
+          ]
+        },
+        {
+          "id": "triangulos",
+          "letra": "E",
+          "titulo": "Forma um triângulo?",
+          "dificuldade": "medio",
+          "peso": 2,
+          "enunciado": "Escreva um programa que leia o tamanho de três segmentos de reta e informe se eles podem formar um triângulo (a soma de quaisquer dois lados deve ser sempre maior que o terceiro lado).\n\nCaso formem, informe também se o triângulo é equilátero (três lados iguais), isósceles (apenas dois lados iguais) ou escaleno (três lados diferentes).",
+          "entrada": {
+            "itens": [
+              "lado_1 -> inteiro",
+              "lado_2 -> inteiro",
+              "lado_3 -> inteiro"
+            ]
+          },
+          "saida": {
+            "texto": "Não forma triângulo / equilátero / isósceles / escaleno:",
+            "itens": [
+              "Esses segmentos de reta não formam um triângulo. Tchau!!!!",
+              "Triangulinho com todos os lados iguais: é equilátero!!",
+              "Triangulinho com dois lados iguais: é isósceles!!",
+              "Tem os três lados diferentes mas ainda continua sendo um triangulinho: é escaleno!!"
+            ]
+          },
+          "observacoes": [],
+          "exemplos": [
+            {
+              "entrada": "3\n3\n3\n",
+              "saida": "Triangulinho com todos os lados iguais: é equilátero!!\n"
+            },
+            {
+              "entrada": "1\n2\n10\n",
+              "saida": "Esses segmentos de reta não formam um triângulo. Tchau!!!!\n"
+            }
+          ],
+          "testes": [
+            {
+              "entrada": "3\n4\n5\n",
+              "saida": "Tem os três lados diferentes mas ainda continua sendo um triangulinho: é escaleno!!\n"
+            },
+            {
+              "entrada": "5\n5\n8\n",
+              "saida": "Triangulinho com dois lados iguais: é isósceles!!\n"
+            },
+            {
+              "entrada": "2\n2\n4\n",
+              "saida": "Esses segmentos de reta não formam um triângulo. Tchau!!!!\n"
+            },
+            {
+              "entrada": "7\n10\n7\n",
+              "saida": "Triangulinho com dois lados iguais: é isósceles!!\n"
+            }
+          ]
+        },
+        {
+          "id": "imposto-de-renda",
+          "letra": "F",
+          "titulo": "Imposto de renda",
+          "dificuldade": "medio",
+          "peso": 2,
+          "enunciado": "Faça um programa que leia o valor da diária de um funcionário e a quantidade de dias que ele trabalhou no mês, e exiba o salário bruto, o Imposto de Renda (IR) a ser pago e o salário líquido.\n\nO cálculo do IR deve considerar:\n• salário até R$ 2.000,00: isento de IR;\n• salário acima de R$ 2.000,00 e até R$ 5.000,00: paga 15% de IR;\n• salário acima de R$ 5.000,00: paga 27,5% de IR.",
+          "entrada": {
+            "itens": [
+              "valor_diaria -> float",
+              "dias_trabalhados -> inteiro"
+            ]
+          },
+          "saida": {
+            "texto": "Se o salário bruto não pagar IR (2 linhas) ou se pagar IR (4 linhas):",
+            "itens": [
+              "Você está isento do Imposto de Renda.",
+              "Seu salário é: R$ {salario_bruto}",
+              "— ou —",
+              "Você não está isento do Imposto de Renda.",
+              "Seu salário bruto é de: R$ {salario_bruto}",
+              "Seu valor do IR é: R$ {ir}",
+              "Seu salário líquido é de: R$ {salario_liquido}"
+            ]
+          },
+          "observacoes": [
+            "Todos os valores devem ter 2 casas decimais."
+          ],
+          "exemplos": [
+            {
+              "entrada": "100\n20\n",
+              "saida": "Você está isento do Imposto de Renda.\nSeu salário é: R$ 2000.00\n"
+            },
+            {
+              "entrada": "150\n22\n",
+              "saida": "Você não está isento do Imposto de Renda.\nSeu salário bruto é de: R$ 3300.00\nSeu valor do IR é: R$ 495.00\nSeu salário líquido é de: R$ 2805.00\n"
+            }
+          ],
+          "testes": [
+            {
+              "entrada": "300\n20\n",
+              "saida": "Você não está isento do Imposto de Renda.\nSeu salário bruto é de: R$ 6000.00\nSeu valor do IR é: R$ 1650.00\nSeu salário líquido é de: R$ 4350.00\n"
+            },
+            {
+              "entrada": "250\n20\n",
+              "saida": "Você não está isento do Imposto de Renda.\nSeu salário bruto é de: R$ 5000.00\nSeu valor do IR é: R$ 750.00\nSeu salário líquido é de: R$ 4250.00\n"
+            },
+            {
+              "entrada": "80.5\n10\n",
+              "saida": "Você está isento do Imposto de Renda.\nSeu salário é: R$ 805.00\n"
+            },
+            {
+              "entrada": "200.01\n10\n",
+              "saida": "Você não está isento do Imposto de Renda.\nSeu salário bruto é de: R$ 2000.10\nSeu valor do IR é: R$ 300.01\nSeu salário líquido é de: R$ 1700.09\n"
+            }
+          ]
+        },
+        {
+          "id": "classificando-numeros",
+          "letra": "G",
+          "titulo": "Classificando números",
+          "dificuldade": "dificil",
+          "peso": 3,
+          "enunciado": "Faça um programa que leia quatro números inteiros (n1, n2, n3 e n4) e depois exiba, em grupos e nesta ordem: os pares e positivos, os pares e negativos, os ímpares e positivos, os ímpares e negativos e os zeros.",
+          "entrada": {
+            "itens": [
+              "n1 -> inteiro",
+              "n2 -> inteiro",
+              "n3 -> inteiro",
+              "n4 -> inteiro"
+            ]
+          },
+          "saida": {
+            "texto": "Cada título é seguido dos números daquele grupo (um por linha, na ordem de entrada), e há uma linha em branco entre os grupos:",
+            "itens": [
+              "Números pares e positivos:",
+              "Números pares e negativos:",
+              "Números ímpares e positivos:",
+              "Números ímpares e negativos:",
+              "Números zeros:"
+            ]
+          },
+          "observacoes": [],
+          "exemplos": [
+            {
+              "entrada": "2\n-4\n3\n0\n",
+              "saida": "Números pares e positivos:\n2\n\nNúmeros pares e negativos:\n-4\n\nNúmeros ímpares e positivos:\n3\n\nNúmeros ímpares e negativos:\n\nNúmeros zeros:\n0\n"
+            }
+          ],
+          "testes": [
+            {
+              "entrada": "-1\n-3\n5\n7\n",
+              "saida": "Números pares e positivos:\n\nNúmeros pares e negativos:\n\nNúmeros ímpares e positivos:\n5\n7\n\nNúmeros ímpares e negativos:\n-1\n-3\n\nNúmeros zeros:\n"
+            },
+            {
+              "entrada": "0\n0\n0\n0\n",
+              "saida": "Números pares e positivos:\n\nNúmeros pares e negativos:\n\nNúmeros ímpares e positivos:\n\nNúmeros ímpares e negativos:\n\nNúmeros zeros:\n0\n0\n0\n0\n"
+            },
+            {
+              "entrada": "10\n-10\n11\n-11\n",
+              "saida": "Números pares e positivos:\n10\n\nNúmeros pares e negativos:\n-10\n\nNúmeros ímpares e positivos:\n11\n\nNúmeros ímpares e negativos:\n-11\n\nNúmeros zeros:\n"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "estruturas-de-repeticao",
+      "numero": 3,
+      "titulo": "Estruturas de repetição",
+      "descricao": "for, while e break: repetindo tarefas.",
+      "questoes": [
+        {
+          "id": "tabuada",
+          "letra": "A",
+          "titulo": "Tabuada",
+          "dificuldade": "facil",
+          "peso": 1,
+          "enunciado": "Escreva um programa que, dado um número, escreva a tabuada de multiplicação desse número (de numero x 1 até numero x 10).",
+          "entrada": {
+            "itens": [
+              "numero -> inteiro"
+            ]
+          },
+          "saida": {
+            "texto": "Dez linhas, com i indo de 1 até 10:",
+            "itens": [
+              "{numero} x {i} = {resultado}"
+            ]
+          },
+          "observacoes": [],
+          "exemplos": [
+            {
+              "entrada": "7\n",
+              "saida": "7 x 1 = 7\n7 x 2 = 14\n7 x 3 = 21\n7 x 4 = 28\n7 x 5 = 35\n7 x 6 = 42\n7 x 7 = 49\n7 x 8 = 56\n7 x 9 = 63\n7 x 10 = 70\n"
+            }
+          ],
+          "testes": [
+            {
+              "entrada": "1\n",
+              "saida": "1 x 1 = 1\n1 x 2 = 2\n1 x 3 = 3\n1 x 4 = 4\n1 x 5 = 5\n1 x 6 = 6\n1 x 7 = 7\n1 x 8 = 8\n1 x 9 = 9\n1 x 10 = 10\n"
+            },
+            {
+              "entrada": "12\n",
+              "saida": "12 x 1 = 12\n12 x 2 = 24\n12 x 3 = 36\n12 x 4 = 48\n12 x 5 = 60\n12 x 6 = 72\n12 x 7 = 84\n12 x 8 = 96\n12 x 9 = 108\n12 x 10 = 120\n"
+            },
+            {
+              "entrada": "0\n",
+              "saida": "0 x 1 = 0\n0 x 2 = 0\n0 x 3 = 0\n0 x 4 = 0\n0 x 5 = 0\n0 x 6 = 0\n0 x 7 = 0\n0 x 8 = 0\n0 x 9 = 0\n0 x 10 = 0\n"
+            }
+          ]
+        },
+        {
+          "id": "contagem-regressiva",
+          "letra": "B",
+          "titulo": "Contagem regressiva do foguete",
+          "dificuldade": "facil",
+          "peso": 1,
+          "enunciado": "Faça um programa que, dado um número n, faça a contagem regressiva de n até 0 e depois anuncie o lançamento do foguete.",
+          "entrada": {
+            "itens": [
+              "n -> inteiro"
+            ]
+          },
+          "saida": {
+            "texto": "Um número por linha, de n até 0, e depois:",
+            "itens": [
+              "O foguete decolou!"
+            ]
+          },
+          "observacoes": [],
+          "exemplos": [
+            {
+              "entrada": "5\n",
+              "saida": "5\n4\n3\n2\n1\n0\nO foguete decolou!\n"
+            }
+          ],
+          "testes": [
+            {
+              "entrada": "0\n",
+              "saida": "0\nO foguete decolou!\n"
+            },
+            {
+              "entrada": "10\n",
+              "saida": "10\n9\n8\n7\n6\n5\n4\n3\n2\n1\n0\nO foguete decolou!\n"
+            },
+            {
+              "entrada": "1\n",
+              "saida": "1\n0\nO foguete decolou!\n"
+            }
+          ]
+        },
+        {
+          "id": "divisao-com-subtracao",
+          "letra": "C",
+          "titulo": "Divisão com subtração",
+          "dificuldade": "facil",
+          "peso": 1,
+          "enunciado": "Faça um programa que receba dois valores inteiros (a e b) e faça a divisão inteira de a por b SEM UTILIZAR os operadores / ou //.",
+          "entrada": {
+            "itens": [
+              "a -> inteiro",
+              "b -> inteiro"
+            ]
+          },
+          "saida": {
+            "texto": "A saída deverá ser o quociente da divisão de a por b."
+          },
+          "observacoes": [
+            "Considere sempre que a >= b e que os dois são positivos.",
+            "Dica: quantas vezes dá para subtrair b de a?"
+          ],
+          "exemplos": [
+            {
+              "entrada": "10\n3\n",
+              "saida": "3\n"
+            }
+          ],
+          "testes": [
+            {
+              "entrada": "20\n5\n",
+              "saida": "4\n"
+            },
+            {
+              "entrada": "7\n7\n",
+              "saida": "1\n"
+            },
+            {
+              "entrada": "100\n9\n",
+              "saida": "11\n"
+            }
+          ]
+        },
+        {
+          "id": "numeros-primos",
+          "letra": "D",
+          "titulo": "É primo?",
+          "dificuldade": "facil",
+          "peso": 1,
+          "enunciado": "Escreva um programa que recebe um número inteiro n e informa se ele é um número primo ou não.",
+          "entrada": {
+            "itens": [
+              "n -> inteiro"
+            ]
+          },
+          "saida": {
+            "texto": "Se o número for primo / caso contrário:",
+            "itens": [
+              "Sim, esse número é primo",
+              "O número não é primo"
+            ]
+          },
+          "observacoes": [
+            "Um número primo é maior que 1 e só é divisível por 1 e por ele mesmo."
+          ],
+          "exemplos": [
+            {
+              "entrada": "7\n",
+              "saida": "Sim, esse número é primo\n"
+            },
+            {
+              "entrada": "9\n",
+              "saida": "O número não é primo\n"
+            }
+          ],
+          "testes": [
+            {
+              "entrada": "1\n",
+              "saida": "O número não é primo\n"
+            },
+            {
+              "entrada": "2\n",
+              "saida": "Sim, esse número é primo\n"
+            },
+            {
+              "entrada": "97\n",
+              "saida": "Sim, esse número é primo\n"
+            },
+            {
+              "entrada": "100\n",
+              "saida": "O número não é primo\n"
+            },
+            {
+              "entrada": "0\n",
+              "saida": "O número não é primo\n"
+            }
+          ]
+        },
+        {
+          "id": "multiplos-de-3-e-5",
+          "letra": "E",
+          "titulo": "Múltiplos de 3 e 5",
+          "dificuldade": "medio",
+          "peso": 2,
+          "enunciado": "Faça um programa que, dado um valor n, exiba os números de 0 a n que são múltiplos de 3, de 5 ou de ambos.",
+          "entrada": {
+            "itens": [
+              "n -> inteiro"
+            ]
+          },
+          "saida": {
+            "texto": "Para cada número do intervalo (em ordem crescente) que for múltiplo de 3 e de 5 / só de 3 / só de 5:",
+            "itens": [
+              "{numero} é múltiplo de 3 e de 5",
+              "{numero} é múltiplo de 3",
+              "{numero} é múltiplo de 5"
+            ]
+          },
+          "observacoes": [
+            "Lembre que 0 é múltiplo de todos os números."
+          ],
+          "exemplos": [
+            {
+              "entrada": "15\n",
+              "saida": "0 é múltiplo de 3 e de 5\n3 é múltiplo de 3\n5 é múltiplo de 5\n6 é múltiplo de 3\n9 é múltiplo de 3\n10 é múltiplo de 5\n12 é múltiplo de 3\n15 é múltiplo de 3 e de 5\n"
+            }
+          ],
+          "testes": [
+            {
+              "entrada": "5\n",
+              "saida": "0 é múltiplo de 3 e de 5\n3 é múltiplo de 3\n5 é múltiplo de 5\n"
+            },
+            {
+              "entrada": "0\n",
+              "saida": "0 é múltiplo de 3 e de 5\n"
+            },
+            {
+              "entrada": "31\n",
+              "saida": "0 é múltiplo de 3 e de 5\n3 é múltiplo de 3\n5 é múltiplo de 5\n6 é múltiplo de 3\n9 é múltiplo de 3\n10 é múltiplo de 5\n12 é múltiplo de 3\n15 é múltiplo de 3 e de 5\n18 é múltiplo de 3\n20 é múltiplo de 5\n21 é múltiplo de 3\n24 é múltiplo de 3\n25 é múltiplo de 5\n27 é múltiplo de 3\n30 é múltiplo de 3 e de 5\n"
+            }
+          ]
+        },
+        {
+          "id": "intervalo",
+          "letra": "F",
+          "titulo": "Intervalinho",
+          "dificuldade": "medio",
+          "peso": 2,
+          "enunciado": "Faça um programa que leia o primeiro e o último número de uma sequência e depois exiba: a soma desses dois números, os números pares e os números ímpares dentro desse intervalo (incluindo as pontas).",
+          "entrada": {
+            "itens": [
+              "primeiro -> inteiro",
+              "ultimo -> inteiro"
+            ]
+          },
+          "saida": {
+            "texto": "Há uma linha em branco antes de cada título de lista:",
+            "itens": [
+              "A soma dos números é: {soma}",
+              "",
+              "Os números pares dentro da sequência são:",
+              "(números pares, um por linha)",
+              "",
+              "Os números ímpares dentro da sequência são:",
+              "(números ímpares, um por linha)"
+            ]
+          },
+          "observacoes": [
+            "Considere que SEMPRE primeiro <= ultimo."
+          ],
+          "exemplos": [
+            {
+              "entrada": "1\n10\n",
+              "saida": "A soma dos números é: 11\n\nOs números pares dentro da sequência são:\n2\n4\n6\n8\n10\n\nOs números ímpares dentro da sequência são:\n1\n3\n5\n7\n9\n"
+            }
+          ],
+          "testes": [
+            {
+              "entrada": "4\n4\n",
+              "saida": "A soma dos números é: 8\n\nOs números pares dentro da sequência são:\n4\n\nOs números ímpares dentro da sequência são:\n"
+            },
+            {
+              "entrada": "-3\n3\n",
+              "saida": "A soma dos números é: 0\n\nOs números pares dentro da sequência são:\n-2\n0\n2\n\nOs números ímpares dentro da sequência são:\n-3\n-1\n1\n3\n"
+            },
+            {
+              "entrada": "5\n12\n",
+              "saida": "A soma dos números é: 17\n\nOs números pares dentro da sequência são:\n6\n8\n10\n12\n\nOs números ímpares dentro da sequência são:\n5\n7\n9\n11\n"
+            }
+          ]
+        },
+        {
+          "id": "soma-continua",
+          "letra": "G",
+          "titulo": "Soma contínua",
+          "dificuldade": "medio",
+          "peso": 2,
+          "enunciado": "Faça um programa que leia números até o usuário não querer mais continuar. Antes de cada número, o programa lê uma confirmação: se for \"S\" ou \"s\", lê mais um número; qualquer outra coisa encerra a leitura.\n\nAo final, exiba quantos números foram lidos e a soma deles.",
+          "entrada": {
+            "texto": "As linhas se alternam assim:",
+            "itens": [
+              "confirmacao -> string (\"S\" ou \"s\" para continuar)",
+              "numero -> float",
+              "(repete até a confirmação ser outra coisa)"
+            ]
+          },
+          "saida": {
+            "itens": [
+              "Você digitou {quantidade} números",
+              "A soma final é: {soma}"
+            ]
+          },
+          "observacoes": [
+            "soma deve ter 2 casas decimais."
+          ],
+          "exemplos": [
+            {
+              "entrada": "S\n10\ns\n20.5\nn\n",
+              "saida": "Você digitou 2 números\nA soma final é: 30.50\n"
+            }
+          ],
+          "testes": [
+            {
+              "entrada": "n\n",
+              "saida": "Você digitou 0 números\nA soma final é: 0.00\n"
+            },
+            {
+              "entrada": "S\n1\nS\n2\nS\n3\nx\n",
+              "saida": "Você digitou 3 números\nA soma final é: 6.00\n"
+            },
+            {
+              "entrada": "s\n-5\nN\n",
+              "saida": "Você digitou 1 números\nA soma final é: -5.00\n"
+            }
+          ]
+        },
+        {
+          "id": "caixa-eletronico",
+          "letra": "H",
+          "titulo": "Caixa eletrônico",
+          "dificuldade": "medio",
+          "peso": 2,
+          "enunciado": "Faça um programa que, dado um saldo inicial, simule operações de depositar e sacar.\n\nDepois do saldo, o programa lê uma operação por vez: \"depositar\" ou \"sacar\". Depois de cada uma delas, lê o valor (float) a ser depositado ou sacado. A leitura termina quando a operação for \"sair\".",
+          "entrada": {
+            "itens": [
+              "saldo -> float",
+              "operacao -> string (\"depositar\", \"sacar\" ou \"sair\")",
+              "valor -> float (só depois de depositar ou sacar)"
+            ]
+          },
+          "saida": {
+            "texto": "Ao final, seu programa deverá mostrar:",
+            "itens": [
+              "Seu saldo era: R$ {saldo_anterior}",
+              "Seu novo saldo é: R$ {saldo_atual}"
+            ]
+          },
+          "observacoes": [
+            "Os valores devem ter 2 casas decimais."
+          ],
+          "exemplos": [
+            {
+              "entrada": "100\ndepositar\n50\nsacar\n30\nsair\n",
+              "saida": "Seu saldo era: R$ 100.00\nSeu novo saldo é: R$ 120.00\n"
+            }
+          ],
+          "testes": [
+            {
+              "entrada": "500\nsair\n",
+              "saida": "Seu saldo era: R$ 500.00\nSeu novo saldo é: R$ 500.00\n"
+            },
+            {
+              "entrada": "0\ndepositar\n1000.5\ndepositar\n0.5\nsacar\n200\nsair\n",
+              "saida": "Seu saldo era: R$ 0.00\nSeu novo saldo é: R$ 801.00\n"
+            },
+            {
+              "entrada": "50\nsacar\n80\nsair\n",
+              "saida": "Seu saldo era: R$ 50.00\nSeu novo saldo é: R$ -30.00\n"
+            }
+          ]
+        },
+        {
+          "id": "sequencia-de-collatz",
+          "letra": "I",
+          "titulo": "Sequência de Collatz",
+          "dificuldade": "medio",
+          "peso": 2,
+          "enunciado": "Escreva um programa que, dado um inteiro n, imprima a sequência de Collatz começando em n até chegar a 1. Cada número da sequência deve ser impresso em uma nova linha.\n\nA sequência de Collatz funciona assim:\n• se o número for par, divida-o por 2;\n• se o número for ímpar, multiplique-o por 3 e some 1.",
+          "entrada": {
+            "itens": [
+              "n -> inteiro (n >= 1)"
+            ]
+          },
+          "saida": {
+            "texto": "Os números da sequência, começando em n e terminando em 1, um por linha."
+          },
+          "observacoes": [
+            "Use divisão inteira (//) para que os números não virem float."
+          ],
+          "exemplos": [
+            {
+              "entrada": "6\n",
+              "saida": "6\n3\n10\n5\n16\n8\n4\n2\n1\n"
+            }
+          ],
+          "testes": [
+            {
+              "entrada": "1\n",
+              "saida": "1\n"
+            },
+            {
+              "entrada": "7\n",
+              "saida": "7\n22\n11\n34\n17\n52\n26\n13\n40\n20\n10\n5\n16\n8\n4\n2\n1\n"
+            },
+            {
+              "entrada": "11\n",
+              "saida": "11\n34\n17\n52\n26\n13\n40\n20\n10\n5\n16\n8\n4\n2\n1\n"
+            }
+          ]
+        },
+        {
+          "id": "fibonacci",
+          "letra": "J",
+          "titulo": "Fibonacci",
+          "dificuldade": "medio",
+          "peso": 2,
+          "enunciado": "A sequência de Fibonacci começa com 0 e 1, e cada termo seguinte é a soma dos dois anteriores:\n0, 1, 1, 2, 3, 5, 8, 13, 21, ...\n\nFaça um programa que, dado um número inteiro n, imprima todos os termos da sequência de Fibonacci menores ou iguais a n, um por linha.",
+          "entrada": {
+            "itens": [
+              "n -> inteiro (n >= 0)"
+            ]
+          },
+          "saida": {
+            "texto": "Os termos da sequência menores ou iguais a n, um por linha."
+          },
+          "observacoes": [],
+          "exemplos": [
+            {
+              "entrada": "10\n",
+              "saida": "0\n1\n1\n2\n3\n5\n8\n"
+            }
+          ],
+          "testes": [
+            {
+              "entrada": "0\n",
+              "saida": "0\n"
+            },
+            {
+              "entrada": "1\n",
+              "saida": "0\n1\n1\n"
+            },
+            {
+              "entrada": "100\n",
+              "saida": "0\n1\n1\n2\n3\n5\n8\n13\n21\n34\n55\n89\n"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "listas",
+      "numero": 4,
+      "titulo": "Listas",
+      "descricao": "Guardando vários valores: append, sort, split, len e companhia.",
+      "questoes": [
+        {
+          "id": "lista-de-compras",
+          "letra": "A",
+          "titulo": "Listinha de compras",
+          "dificuldade": "facil",
+          "peso": 1,
+          "enunciado": "Escreva um programa que simule uma lista de compras. O usuário digita itens livremente, um por linha, e o programa os guarda em uma lista. A entrada termina quando o usuário digitar a palavra \"fim\" (em maiúsculas ou minúsculas).\n\nAo final, exiba todos os itens da lista em ordem alfabética crescente.",
+          "entrada": {
+            "itens": [
+              "item -> string (ou \"fim\" para encerrar)"
+            ]
+          },
+          "saida": {
+            "texto": "Os itens da lista em ordem alfabética, um por linha."
+          },
+          "observacoes": [
+            "Um mesmo item pode ser digitado mais de uma vez, e cada repetição deve aparecer na saída."
+          ],
+          "exemplos": [
+            {
+              "entrada": "banana\nabacaxi\nuva\nFIM\n",
+              "saida": "abacaxi\nbanana\nuva\n"
+            }
+          ],
+          "testes": [
+            {
+              "entrada": "pão\nleite\npão\narroz\nfim\n",
+              "saida": "arroz\nleite\npão\npão\n"
+            },
+            {
+              "entrada": "fim\n",
+              "saida": ""
+            },
+            {
+              "entrada": "sabão\nfIm\n",
+              "saida": "sabão\n"
+            }
+          ]
+        },
+        {
+          "id": "multiplique-por-k",
+          "letra": "B",
+          "titulo": "Multiplique por k",
+          "dificuldade": "facil",
+          "peso": 1,
+          "enunciado": "Dada uma lista de números inteiros e um valor inteiro k, crie uma nova lista com os elementos multiplicados por k e imprima o resultado.",
+          "entrada": {
+            "itens": [
+              "elementos -> string (números inteiros separados por espaço, em uma única linha)",
+              "k -> inteiro"
+            ]
+          },
+          "saida": {
+            "texto": "Os elementos da nova lista, na mesma linha, separados por um espaço."
+          },
+          "observacoes": [],
+          "exemplos": [
+            {
+              "entrada": "1 2 3\n2\n",
+              "saida": "2 4 6\n"
+            }
+          ],
+          "testes": [
+            {
+              "entrada": "5 -3 0 10\n-1\n",
+              "saida": "-5 3 0 -10\n"
+            },
+            {
+              "entrada": "7\n0\n",
+              "saida": "0\n"
+            },
+            {
+              "entrada": "10 20 30 40 50\n3\n",
+              "saida": "30 60 90 120 150\n"
+            }
+          ]
+        },
+        {
+          "id": "maiores-que-a-media",
+          "letra": "C",
+          "titulo": "Quantos maiores que a média?",
+          "dificuldade": "facil",
+          "peso": 1,
+          "enunciado": "Dada uma lista de números inteiros, calcule a média aritmética e conte quantos elementos são maiores do que ela.",
+          "entrada": {
+            "itens": [
+              "elementos -> string (números inteiros separados por espaço, em uma única linha)"
+            ]
+          },
+          "saida": {
+            "texto": "A quantidade de números que são maiores que a média aritmética."
+          },
+          "observacoes": [],
+          "exemplos": [
+            {
+              "entrada": "1 2 3 4 5\n",
+              "saida": "2\n"
+            }
+          ],
+          "testes": [
+            {
+              "entrada": "10 10 10\n",
+              "saida": "0\n"
+            },
+            {
+              "entrada": "1 100 2 3\n",
+              "saida": "1\n"
+            },
+            {
+              "entrada": "-5 0 5 20\n",
+              "saida": "1\n"
+            }
+          ]
+        },
+        {
+          "id": "palavras-com-vogal",
+          "letra": "D",
+          "titulo": "Palavras que começam com vogal",
+          "dificuldade": "medio",
+          "peso": 2,
+          "enunciado": "Faça um programa que leia palavras, uma por linha, até ser digitado \"fim\". Depois, exiba apenas as palavras que começam com vogal, na ordem em que foram digitadas.",
+          "entrada": {
+            "itens": [
+              "palavra -> string (ou \"fim\" para encerrar)"
+            ]
+          },
+          "saida": {
+            "texto": "As palavras que começam com vogal (maiúscula ou minúscula), uma por linha. Se nenhuma palavra começar com vogal, exiba:",
+            "itens": [
+              "Nenhuma palavra digitada começa com vogal."
+            ]
+          },
+          "observacoes": [],
+          "exemplos": [
+            {
+              "entrada": "abacaxi\nbanana\nOvo\nuva\ncasa\nfim\n",
+              "saida": "abacaxi\nOvo\nuva\n"
+            }
+          ],
+          "testes": [
+            {
+              "entrada": "pedra\ncarro\nfim\n",
+              "saida": "Nenhuma palavra digitada começa com vogal.\n"
+            },
+            {
+              "entrada": "Ilha\nfim\n",
+              "saida": "Ilha\n"
+            },
+            {
+              "entrada": "fim\n",
+              "saida": "Nenhuma palavra digitada começa com vogal.\n"
+            }
+          ]
+        },
+        {
+          "id": "numeros-elevados",
+          "letra": "E",
+          "titulo": "Números elevados a um expoente",
+          "dificuldade": "medio",
+          "peso": 2,
+          "enunciado": "Faça um programa que leia 10 números e, em seguida, um expoente. O programa deve criar uma nova lista com cada número elevado ao expoente informado e imprimi-la.",
+          "entrada": {
+            "itens": [
+              "numero1 -> float",
+              "...",
+              "numero10 -> float",
+              "expoente -> inteiro"
+            ]
+          },
+          "saida": {
+            "texto": "Cada um dos 10 números elevado ao expoente, um por linha."
+          },
+          "observacoes": [
+            "Os resultados devem ter 2 casas decimais."
+          ],
+          "exemplos": [
+            {
+              "entrada": "1\n2\n3\n4\n5\n6\n7\n8\n9\n10\n2\n",
+              "saida": "1.00\n4.00\n9.00\n16.00\n25.00\n36.00\n49.00\n64.00\n81.00\n100.00\n"
+            }
+          ],
+          "testes": [
+            {
+              "entrada": "0.5\n1.5\n2.5\n-1\n-2\n0\n10\n3\n1.1\n4\n3\n",
+              "saida": "0.12\n3.38\n15.62\n-1.00\n-8.00\n0.00\n1000.00\n27.00\n1.33\n64.00\n"
+            },
+            {
+              "entrada": "9\n8\n7\n6\n5\n4\n3\n2\n1\n0\n0\n",
+              "saida": "1.00\n1.00\n1.00\n1.00\n1.00\n1.00\n1.00\n1.00\n1.00\n1.00\n"
+            }
+          ]
+        },
+        {
+          "id": "pares-e-impares",
+          "letra": "F",
+          "titulo": "Somando pares e ímpares",
+          "dificuldade": "medio",
+          "peso": 2,
+          "enunciado": "Escreva um programa que permita ao usuário digitar uma quantidade indeterminada de números inteiros, um por vez. Depois, exiba a quantidade de números digitados, a soma dos números pares e a soma dos números ímpares.",
+          "entrada": {
+            "texto": "Primeiro vem um número. Depois, as linhas se alternam assim:",
+            "itens": [
+              "numero -> inteiro",
+              "confirmacao -> string (\"s\" ou \"S\" para digitar mais um número)",
+              "numero -> inteiro",
+              "..."
+            ]
+          },
+          "saida": {
+            "itens": [
+              "Quantidade de números digitados: {qtd_total}",
+              "Soma dos números pares: {soma_pares}",
+              "Soma dos números ímpares: {soma_impares}"
+            ]
+          },
+          "observacoes": [],
+          "exemplos": [
+            {
+              "entrada": "4\ns\n7\nS\n10\nn\n",
+              "saida": "Quantidade de números digitados: 3\nSoma dos números pares: 14\nSoma dos números ímpares: 7\n"
+            }
+          ],
+          "testes": [
+            {
+              "entrada": "5\nn\n",
+              "saida": "Quantidade de números digitados: 1\nSoma dos números pares: 0\nSoma dos números ímpares: 5\n"
+            },
+            {
+              "entrada": "-2\ns\n-3\ns\n0\nx\n",
+              "saida": "Quantidade de números digitados: 3\nSoma dos números pares: -2\nSoma dos números ímpares: -3\n"
+            },
+            {
+              "entrada": "1\ns\n1\ns\n1\nnao\n",
+              "saida": "Quantidade de números digitados: 3\nSoma dos números pares: 0\nSoma dos números ímpares: 3\n"
+            }
+          ]
+        },
+        {
+          "id": "quantidade-de-elementos",
+          "letra": "G",
+          "titulo": "Quantas vezes aparece?",
+          "dificuldade": "medio",
+          "peso": 2,
+          "enunciado": "Escreva um programa que recebe valores para serem adicionados em uma lista e, ao final, exibe quantas vezes cada valor aparece nela.",
+          "entrada": {
+            "texto": "Primeiro vem um número. Depois, as linhas se alternam assim:",
+            "itens": [
+              "n -> float",
+              "confirmacao -> string (\"s\" ou \"S\" para digitar mais um valor)",
+              "n -> float",
+              "..."
+            ]
+          },
+          "saida": {
+            "texto": "Para cada valor diferente, na ordem em que apareceu pela primeira vez:",
+            "itens": [
+              "O elemento {elemento} aparece {quantidade} vezes na lista"
+            ]
+          },
+          "observacoes": [
+            "Cada valor só deve aparecer UMA vez na saída. Ex.: para as entradas 2, 2, 4 e 5, a saída tem 3 linhas (2.0, 4.0 e 5.0).",
+            "Os valores são float, então aparecem como 2.0."
+          ],
+          "exemplos": [
+            {
+              "entrada": "2\ns\n2\ns\n4\ns\n5\nn\n",
+              "saida": "O elemento 2.0 aparece 2 vezes na lista\nO elemento 4.0 aparece 1 vezes na lista\nO elemento 5.0 aparece 1 vezes na lista\n"
+            }
+          ],
+          "testes": [
+            {
+              "entrada": "3.5\nn\n",
+              "saida": "O elemento 3.5 aparece 1 vezes na lista\n"
+            },
+            {
+              "entrada": "1\nS\n2\nS\n1\nS\n2\nS\n1\nfim\n",
+              "saida": "O elemento 1.0 aparece 3 vezes na lista\nO elemento 2.0 aparece 2 vezes na lista\n"
+            }
+          ]
+        },
+        {
+          "id": "contabilidade",
+          "letra": "H",
+          "titulo": "Contabilidade",
+          "dificuldade": "medio",
+          "peso": 2,
+          "enunciado": "Faça um programa que leia o nome, o preço de compra e o percentual de lucro de 5 produtos. Depois da leitura, exiba para cada produto seu nome, o preço de compra e o preço de venda calculado.",
+          "entrada": {
+            "texto": "Para cada um dos 5 produtos:",
+            "itens": [
+              "nome_produto -> string",
+              "preco_compra -> float",
+              "percentual_lucro -> float"
+            ]
+          },
+          "saida": {
+            "texto": "Uma linha por produto, na ordem de entrada:",
+            "itens": [
+              "{nome_produto}: Compra = R${preco_compra}, Venda = R${preco_venda}"
+            ]
+          },
+          "observacoes": [
+            "preco_venda = preco_compra + percentual_lucro% do preco_compra.",
+            "Os preços devem ter 2 casas decimais."
+          ],
+          "exemplos": [
+            {
+              "entrada": "Caneta\n2\n50\nCaderno\n15.5\n20\nLápis\n1\n100\nBorracha\n0.8\n25\nMochila\n120\n10\n",
+              "saida": "Caneta: Compra = R$2.00, Venda = R$3.00\nCaderno: Compra = R$15.50, Venda = R$18.60\nLápis: Compra = R$1.00, Venda = R$2.00\nBorracha: Compra = R$0.80, Venda = R$1.00\nMochila: Compra = R$120.00, Venda = R$132.00\n"
+            }
+          ],
+          "testes": [
+            {
+              "entrada": "A\n10\n0\nB\n10\n10\nC\n10\n15.5\nD\n99.99\n1\nE\n0\n50\n",
+              "saida": "A: Compra = R$10.00, Venda = R$10.00\nB: Compra = R$10.00, Venda = R$11.00\nC: Compra = R$10.00, Venda = R$11.55\nD: Compra = R$99.99, Venda = R$100.99\nE: Compra = R$0.00, Venda = R$0.00\n"
+            }
+          ]
+        },
+        {
+          "id": "k-esimo-valor",
+          "letra": "I",
+          "titulo": "k-ésimo valor",
+          "dificuldade": "medio",
+          "peso": 2,
+          "enunciado": "Dada uma lista de números inteiros distintos, encontre o valor que fica na posição k quando a lista está em ordem crescente.\n\nO programa lê primeiro o tamanho t da lista, depois os t números (um por linha) e por último a posição k.",
+          "entrada": {
+            "itens": [
+              "t -> inteiro",
+              "n1 -> inteiro",
+              "...",
+              "nt -> inteiro",
+              "k -> inteiro"
+            ]
+          },
+          "saida": {
+            "texto": "O valor que está na posição k da lista ordenada em ordem crescente."
+          },
+          "observacoes": [
+            "As posições começam em 0, como os índices do Python: k = 0 é o menor valor.",
+            "k sempre será uma posição válida da lista."
+          ],
+          "exemplos": [
+            {
+              "entrada": "5\n30\n10\n50\n20\n40\n0\n",
+              "saida": "10\n"
+            }
+          ],
+          "testes": [
+            {
+              "entrada": "5\n30\n10\n50\n20\n40\n4\n",
+              "saida": "50\n"
+            },
+            {
+              "entrada": "3\n-1\n7\n3\n1\n",
+              "saida": "3\n"
+            },
+            {
+              "entrada": "1\n42\n0\n",
+              "saida": "42\n"
+            }
+          ]
+        },
+        {
+          "id": "ranking-de-notas",
+          "letra": "J",
+          "titulo": "Ranking de notas",
+          "dificuldade": "dificil",
+          "peso": 3,
+          "enunciado": "Faça um programa que leia o nome e a nota de vários alunos. A entrada termina quando for digitado um nome vazio OU o nome \"fim\". Guarde os nomes em uma lista e as notas em outra.\n\nEm seguida, exiba os alunos ordenados da maior para a menor nota.",
+          "entrada": {
+            "itens": [
+              "nome_aluno -> string (vazio ou \"fim\" encerra)",
+              "nota_aluno -> float (só é lida se o nome não encerrou)"
+            ]
+          },
+          "saida": {
+            "texto": "Uma linha por aluno, da maior para a menor nota:",
+            "itens": [
+              "{nome}: {nota}"
+            ]
+          },
+          "observacoes": [
+            "Se duas notas forem iguais, mostre primeiro quem foi digitado primeiro.",
+            "A nota deve ter 2 casas decimais."
+          ],
+          "exemplos": [
+            {
+              "entrada": "Ana\n7.5\nBruno\n9\nCarla\n7.5\nDavi\n10\nfim\n",
+              "saida": "Davi: 10.00\nBruno: 9.00\nAna: 7.50\nCarla: 7.50\n"
+            }
+          ],
+          "testes": [
+            {
+              "entrada": "João\n5\nMaria\n8\n\n",
+              "saida": "Maria: 8.00\nJoão: 5.00\n"
+            },
+            {
+              "entrada": "Zeca\n0\nFIM\n",
+              "saida": "Zeca: 0.00\n"
+            },
+            {
+              "entrada": "fim\n",
+              "saida": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "dicionarios",
+      "numero": 5,
+      "titulo": "Dicionários",
+      "descricao": "Pares de chave e valor: contando, agrupando e consultando.",
+      "questoes": [
+        {
+          "id": "dicionario-de-quadrados",
+          "letra": "A",
+          "titulo": "Dicionário de quadrados",
+          "dificuldade": "facil",
+          "peso": 1,
+          "enunciado": "Dado um número inteiro positivo n, crie um dicionário em que as chaves vão de 1 até n e os valores são os quadrados das chaves. Depois, exiba o dicionário.",
+          "entrada": {
+            "itens": [
+              "n -> inteiro"
+            ]
+          },
+          "saida": {
+            "texto": "Uma linha para cada item do dicionário, em ordem crescente de chave:",
+            "itens": [
+              "{chave}: {valor}"
+            ]
+          },
+          "observacoes": [],
+          "exemplos": [
+            {
+              "entrada": "5\n",
+              "saida": "1: 1\n2: 4\n3: 9\n4: 16\n5: 25\n"
+            }
+          ],
+          "testes": [
+            {
+              "entrada": "1\n",
+              "saida": "1: 1\n"
+            },
+            {
+              "entrada": "10\n",
+              "saida": "1: 1\n2: 4\n3: 9\n4: 16\n5: 25\n6: 36\n7: 49\n8: 64\n9: 81\n10: 100\n"
+            }
+          ]
+        },
+        {
+          "id": "soma-por-categoria",
+          "letra": "B",
+          "titulo": "Soma por categoria",
+          "dificuldade": "medio",
+          "peso": 2,
+          "enunciado": "Faça um programa que receba n pares de dados: uma categoria e um valor inteiro. Some os valores de cada categoria e imprima o total de cada uma.",
+          "entrada": {
+            "itens": [
+              "n -> inteiro",
+              "n linhas no formato: categoria valor (separados por espaço)"
+            ]
+          },
+          "saida": {
+            "texto": "Uma linha por categoria, na ordem em que cada categoria apareceu pela primeira vez:",
+            "itens": [
+              "{categoria}: {valor_total}"
+            ]
+          },
+          "observacoes": [
+            "Pesquise sobre o método split() do Python: ele será necessário nesta questão."
+          ],
+          "exemplos": [
+            {
+              "entrada": "5\ncomida 10\ntransporte 5\ncomida 20\nlazer 7\ntransporte 3\n",
+              "saida": "comida: 30\ntransporte: 8\nlazer: 7\n"
+            }
+          ],
+          "testes": [
+            {
+              "entrada": "1\ncasa 100\n",
+              "saida": "casa: 100\n"
+            },
+            {
+              "entrada": "3\na 1\nb 2\na -1\n",
+              "saida": "a: 0\nb: 2\n"
+            }
+          ]
+        },
+        {
+          "id": "lista-telefonica",
+          "letra": "C",
+          "titulo": "Lista telefônica",
+          "dificuldade": "medio",
+          "peso": 2,
+          "enunciado": "Faça um programa que guarde números de telefone em um dicionário. O programa recebe linhas no formato \"nome telefone\" até o usuário digitar \"fim\". Depois disso, lê um nome e imprime o telefone correspondente, caso ele exista.",
+          "entrada": {
+            "itens": [
+              "linha -> string (\"nome telefone\" ou \"fim\")",
+              "nome -> string (nome a ser consultado, lido depois do \"fim\")"
+            ]
+          },
+          "saida": {
+            "texto": "O telefone, se o nome existir na lista. Caso contrário:",
+            "itens": [
+              "Essa pessoa não está na lista telefônica"
+            ]
+          },
+          "observacoes": [
+            "A busca não deve diferenciar maiúsculas de minúsculas: \"ANA\", \"ana\" e \"Ana\" encontram o mesmo telefone."
+          ],
+          "exemplos": [
+            {
+              "entrada": "Ana 99999-1111\nBruno 98888-2222\nfim\nbruno\n",
+              "saida": "98888-2222\n"
+            }
+          ],
+          "testes": [
+            {
+              "entrada": "Ana 99999-1111\nBruno 98888-2222\nfim\nCarla\n",
+              "saida": "Essa pessoa não está na lista telefônica\n"
+            },
+            {
+              "entrada": "fim\nana\n",
+              "saida": "Essa pessoa não está na lista telefônica\n"
+            },
+            {
+              "entrada": "CARLA 3333-4444\nFIM\ncarla\n",
+              "saida": "3333-4444\n"
+            }
+          ]
+        },
+        {
+          "id": "agrupando-por-letra",
+          "letra": "D",
+          "titulo": "Agrupando por letra",
+          "dificuldade": "medio",
+          "peso": 2,
+          "enunciado": "Faça um programa que receba nomes de pessoas, um por linha, até o usuário digitar \"fim\". Ao final, agrupe os nomes pela primeira letra (sem diferenciar maiúsculas de minúsculas) e imprima os grupos.",
+          "entrada": {
+            "itens": [
+              "nome -> string (ou \"fim\" para encerrar)"
+            ]
+          },
+          "saida": {
+            "texto": "Uma linha por letra, em ordem alfabética. Os nomes ficam na ordem em que foram digitados, separados por espaço:",
+            "itens": [
+              "{LETRA}: {nomes}"
+            ]
+          },
+          "observacoes": [
+            "A letra do grupo aparece sempre em maiúscula."
+          ],
+          "exemplos": [
+            {
+              "entrada": "Ana\nbruno\nAlice\nCarlos\nbeatriz\nfim\n",
+              "saida": "A: Ana Alice\nB: bruno beatriz\nC: Carlos\n"
+            }
+          ],
+          "testes": [
+            {
+              "entrada": "Zeca\nfim\n",
+              "saida": "Z: Zeca\n"
+            },
+            {
+              "entrada": "fim\n",
+              "saida": ""
+            },
+            {
+              "entrada": "maria\nMarcos\nlucas\nMel\nFIM\n",
+              "saida": "L: lucas\nM: maria Marcos Mel\n"
+            }
+          ]
+        },
+        {
+          "id": "contagem-de-letras",
+          "letra": "E",
+          "titulo": "Contagem de letras na frase",
+          "dificuldade": "medio",
+          "peso": 2,
+          "enunciado": "Escreva um programa que recebe uma frase e conta quantas vezes cada letra aparece, sem diferenciar maiúsculas de minúsculas. Espaços, números e pontuação devem ser ignorados.",
+          "entrada": {
+            "itens": [
+              "frase -> string"
+            ]
+          },
+          "saida": {
+            "texto": "Uma linha para cada letra que apareceu, em ordem alfabética:",
+            "itens": [
+              "{LETRA}: {contagem}"
+            ]
+          },
+          "observacoes": [
+            "A letra aparece sempre em maiúscula.",
+            "Considere que a frase não terá letras acentuadas."
+          ],
+          "exemplos": [
+            {
+              "entrada": "Ola Mundo\n",
+              "saida": "A: 1\nD: 1\nL: 1\nM: 1\nN: 1\nO: 2\nU: 1\n"
+            }
+          ],
+          "testes": [
+            {
+              "entrada": "banana\n",
+              "saida": "A: 3\nB: 1\nN: 2\n"
+            },
+            {
+              "entrada": "Python e Legal!\n",
+              "saida": "A: 1\nE: 2\nG: 1\nH: 1\nL: 2\nN: 1\nO: 1\nP: 1\nT: 1\nY: 1\n"
+            },
+            {
+              "entrada": "AAA aaa 123\n",
+              "saida": "A: 6\n"
+            }
+          ]
+        },
+        {
+          "id": "salarios-e-media",
+          "letra": "F",
+          "titulo": "Salários e média",
+          "dificuldade": "dificil",
+          "peso": 3,
+          "enunciado": "Faça um programa que leia o CPF, o nome e o salário de 10 funcionários, guardando-os em um dicionário. Ao final, exiba quem tem salário abaixo da média e quem tem salário acima da média, nessa ordem.",
+          "entrada": {
+            "texto": "Para cada um dos 10 funcionários:",
+            "itens": [
+              "cpf -> string",
+              "nome -> string",
+              "salario -> float"
+            ]
+          },
+          "saida": {
+            "texto": "Os funcionários aparecem na ordem de entrada, e há uma linha em branco entre os dois grupos:",
+            "itens": [
+              "Abaixo da média:",
+              "{cpf} {nome}",
+              "...",
+              "",
+              "Acima da média:",
+              "{cpf} {nome}",
+              "..."
+            ]
+          },
+          "observacoes": [
+            "Quem tem salário exatamente igual à média não aparece em nenhum grupo."
+          ],
+          "exemplos": [
+            {
+              "entrada": "111\nAna\n1000\n222\nBruno\n2000\n333\nCarla\n3000\n444\nDavi\n4000\n555\nEva\n5000\n666\nFábio\n6000\n777\nGabi\n7000\n888\nHugo\n8000\n999\nÍris\n9000\n000\nJoão\n10000\n",
+              "saida": "Abaixo da média:\n111 Ana\n222 Bruno\n333 Carla\n444 Davi\n555 Eva\n\nAcima da média:\n666 Fábio\n777 Gabi\n888 Hugo\n999 Íris\n000 João\n"
+            }
+          ],
+          "testes": [
+            {
+              "entrada": "1\nA\n3000\n2\nB\n3000\n3\nC\n3000\n4\nD\n3000\n5\nE\n3000\n6\nF\n3000\n7\nG\n12000\n8\nH\n3000\n9\nI\n3000\n10\nJ\n3000\n",
+              "saida": "Abaixo da média:\n1 A\n2 B\n3 C\n4 D\n5 E\n6 F\n8 H\n9 I\n10 J\n\nAcima da média:\n7 G\n"
+            },
+            {
+              "entrada": "1\nA\n2500\n2\nB\n2500\n3\nC\n2500\n4\nD\n2500\n5\nE\n2500\n6\nF\n2500\n7\nG\n2500\n8\nH\n2500\n9\nI\n2500\n10\nJ\n2500\n",
+              "saida": "Abaixo da média:\n\nAcima da média:\n"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "funcoes",
+      "numero": 6,
+      "titulo": "Funções",
+      "descricao": "def, parâmetros e return: organizando o código em blocos reutilizáveis.",
+      "questoes": [
+        {
+          "id": "area-do-retangulo",
+          "letra": "A",
+          "titulo": "Área do retângulo",
+          "dificuldade": "facil",
+          "peso": 1,
+          "enunciado": "Faça um programa que leia a base e a altura de um retângulo e chame uma função area_retangulo(base, altura) que calcula a área e a EXIBE com print().",
+          "entrada": {
+            "itens": [
+              "base -> float",
+              "altura -> float"
+            ]
+          },
+          "saida": {
+            "itens": [
+              "A área do retângulo é {resultado}"
+            ]
+          },
+          "observacoes": [
+            "resultado deve ter 2 casas decimais."
+          ],
+          "exemplos": [
+            {
+              "entrada": "5\n3\n",
+              "saida": "A área do retângulo é 15.00\n"
+            }
+          ],
+          "testes": [
+            {
+              "entrada": "2.5\n4\n",
+              "saida": "A área do retângulo é 10.00\n"
+            },
+            {
+              "entrada": "0\n10\n",
+              "saida": "A área do retângulo é 0.00\n"
+            },
+            {
+              "entrada": "1.25\n1.25\n",
+              "saida": "A área do retângulo é 1.56\n"
+            }
+          ]
+        },
+        {
+          "id": "qual-e-a-area",
+          "letra": "B",
+          "titulo": "Qual é a área? (com return)",
+          "dificuldade": "facil",
+          "peso": 1,
+          "enunciado": "Crie uma função area_retangulo(base, altura) que calcula e RETORNA (com return) a área de um retângulo. O programa lê a base e a altura, chama a função e exibe o valor retornado.",
+          "entrada": {
+            "itens": [
+              "base -> float",
+              "altura -> float"
+            ]
+          },
+          "saida": {
+            "itens": [
+              "A área do retângulo é {area}"
+            ]
+          },
+          "observacoes": [
+            "area deve ter 2 casas decimais.",
+            "Qual a diferença entre esta questão e a anterior? Pense no print() e no return."
+          ],
+          "exemplos": [
+            {
+              "entrada": "10\n2.5\n",
+              "saida": "A área do retângulo é 25.00\n"
+            }
+          ],
+          "testes": [
+            {
+              "entrada": "3\n3\n",
+              "saida": "A área do retângulo é 9.00\n"
+            },
+            {
+              "entrada": "0.1\n0.2\n",
+              "saida": "A área do retângulo é 0.02\n"
+            },
+            {
+              "entrada": "1000\n0.5\n",
+              "saida": "A área do retângulo é 500.00\n"
+            }
+          ]
+        },
+        {
+          "id": "media-entre-3",
+          "letra": "C",
+          "titulo": "Média entre 3",
+          "dificuldade": "facil",
+          "peso": 1,
+          "enunciado": "Escreva uma função media(a, b, c) que recebe três números e retorna a média aritmética entre eles. O programa lê os três números e exibe a média.",
+          "entrada": {
+            "itens": [
+              "n1 -> float",
+              "n2 -> float",
+              "n3 -> float"
+            ]
+          },
+          "saida": {
+            "texto": "A média aritmética entre os três números, com 2 casas decimais."
+          },
+          "observacoes": [],
+          "exemplos": [
+            {
+              "entrada": "7\n8\n9\n",
+              "saida": "8.00\n"
+            }
+          ],
+          "testes": [
+            {
+              "entrada": "10\n5.5\n6\n",
+              "saida": "7.17\n"
+            },
+            {
+              "entrada": "0\n0\n1\n",
+              "saida": "0.33\n"
+            },
+            {
+              "entrada": "-3\n3\n9\n",
+              "saida": "3.00\n"
+            }
+          ]
+        },
+        {
+          "id": "contar-vogais",
+          "letra": "D",
+          "titulo": "Contando vogais",
+          "dificuldade": "facil",
+          "peso": 1,
+          "enunciado": "Faça um programa que leia uma palavra e use uma função para contar quantas vogais aparecem nela.",
+          "entrada": {
+            "itens": [
+              "palavra -> string"
+            ]
+          },
+          "saida": {
+            "itens": [
+              "A quantidade de vogais em {palavra} é {quantidade}"
+            ]
+          },
+          "observacoes": [
+            "Vogais maiúsculas e minúsculas contam; letras acentuadas não contam."
+          ],
+          "exemplos": [
+            {
+              "entrada": "Python\n",
+              "saida": "A quantidade de vogais em Python é 1\n"
+            }
+          ],
+          "testes": [
+            {
+              "entrada": "abacaxi\n",
+              "saida": "A quantidade de vogais em abacaxi é 4\n"
+            },
+            {
+              "entrada": "AEIOU\n",
+              "saida": "A quantidade de vogais em AEIOU é 5\n"
+            },
+            {
+              "entrada": "xyz\n",
+              "saida": "A quantidade de vogais em xyz é 0\n"
+            },
+            {
+              "entrada": "Paralelepipedo\n",
+              "saida": "A quantidade de vogais em Paralelepipedo é 7\n"
+            }
+          ]
+        },
+        {
+          "id": "contagem-de-cada-vogal",
+          "letra": "E",
+          "titulo": "Contagem de cada vogal",
+          "dificuldade": "medio",
+          "peso": 2,
+          "enunciado": "Faça um programa que leia uma palavra e crie uma função que conta quantas vezes CADA vogal aparece nela, devolvendo um dicionário. Exiba o dicionário com print().",
+          "entrada": {
+            "itens": [
+              "palavra -> string"
+            ]
+          },
+          "saida": {
+            "texto": "O dicionário, com as chaves na ordem a, e, i, o, u (mesmo as que aparecem 0 vezes). Exemplo de formato:",
+            "itens": [
+              "{'a': 3, 'e': 0, 'i': 0, 'o': 0, 'u': 0}"
+            ]
+          },
+          "observacoes": [
+            "Maiúsculas e minúsculas contam como a mesma vogal; letras acentuadas não contam."
+          ],
+          "exemplos": [
+            {
+              "entrada": "banana\n",
+              "saida": "{'a': 3, 'e': 0, 'i': 0, 'o': 0, 'u': 0}\n"
+            }
+          ],
+          "testes": [
+            {
+              "entrada": "Paralelepipedo\n",
+              "saida": "{'a': 2, 'e': 3, 'i': 1, 'o': 1, 'u': 0}\n"
+            },
+            {
+              "entrada": "xyz\n",
+              "saida": "{'a': 0, 'e': 0, 'i': 0, 'o': 0, 'u': 0}\n"
+            },
+            {
+              "entrada": "AEIOUaeiou\n",
+              "saida": "{'a': 2, 'e': 2, 'i': 2, 'o': 2, 'u': 2}\n"
+            }
+          ]
+        },
+        {
+          "id": "n-elevado-a-x",
+          "letra": "F",
+          "titulo": "n elevado a x",
+          "dificuldade": "medio",
+          "peso": 2,
+          "enunciado": "Crie uma função potencia(n, x) que calcule e retorne n elevado a x SEM UTILIZAR o operador ** nem a função pow().",
+          "entrada": {
+            "itens": [
+              "n -> float",
+              "x -> inteiro (x >= 0)"
+            ]
+          },
+          "saida": {
+            "itens": [
+              "{n} elevado a {x} é {resultado}"
+            ]
+          },
+          "observacoes": [
+            "n aparece como float (ex.: 2.0); resultado deve ter 2 casas decimais.",
+            "Dica: 2³ = 2 × 2 × 2. E qualquer número elevado a 0 dá 1."
+          ],
+          "exemplos": [
+            {
+              "entrada": "2\n10\n",
+              "saida": "2.0 elevado a 10 é 1024.00\n"
+            }
+          ],
+          "testes": [
+            {
+              "entrada": "3\n0\n",
+              "saida": "3.0 elevado a 0 é 1.00\n"
+            },
+            {
+              "entrada": "1.5\n3\n",
+              "saida": "1.5 elevado a 3 é 3.38\n"
+            },
+            {
+              "entrada": "-2\n5\n",
+              "saida": "-2.0 elevado a 5 é -32.00\n"
+            }
+          ]
+        },
+        {
+          "id": "aprovados",
+          "letra": "G",
+          "titulo": "Quem foi aprovado?",
+          "dificuldade": "medio",
+          "peso": 2,
+          "enunciado": "Crie uma função alunos_aprovados(nomes, notas) que recebe duas listas, uma com os nomes e outra com as notas dos alunos, e exibe o nome dos alunos aprovados (nota >= 7).",
+          "entrada": {
+            "texto": "Primeiro a quantidade de alunos; depois, para cada aluno:",
+            "itens": [
+              "n -> inteiro",
+              "nome_do_aluno -> string",
+              "nota_do_aluno -> float"
+            ]
+          },
+          "saida": {
+            "texto": "O título, seguido dos nomes dos aprovados (um por linha, na ordem de entrada):",
+            "itens": [
+              "Os alunos que foram aprovados foram:"
+            ]
+          },
+          "observacoes": [],
+          "exemplos": [
+            {
+              "entrada": "3\nAna\n8\nBruno\n6.9\nCarla\n7\n",
+              "saida": "Os alunos que foram aprovados foram:\nAna\nCarla\n"
+            }
+          ],
+          "testes": [
+            {
+              "entrada": "2\nXavier\n1\nYara\n2\n",
+              "saida": "Os alunos que foram aprovados foram:\n"
+            },
+            {
+              "entrada": "1\nZé\n10\n",
+              "saida": "Os alunos que foram aprovados foram:\nZé\n"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,62 @@
+/* Cores e fontes usadas no site inteiro ("variáveis" de CSS). */
+:root {
+  --azul: #16284a;
+  --azul-claro: #24407a;
+  --dourado: #f0c14b;
+  --dourado-texto: #b8860b;
+  --verde: #2e9a5c;
+  --laranja: #ef7f3a;
+  --vermelho: #d4453a;
+  --fundo: #f6f7f9;
+  --cartao: #ffffff;
+  --texto: #1d1d1f;
+  --texto-suave: #6d6d76;
+  --borda: #e3e3e8;
+  --sombra: 0 4px 24px rgba(22, 40, 74, 0.08);
+  --raio: 14px;
+
+  --fonte-texto: 'Raleway', system-ui, sans-serif;
+  --fonte-titulo: 'Rubik', system-ui, sans-serif;
+  --fonte-codigo: ui-monospace, 'Cascadia Code', Consolas, monospace;
+
+  font-family: var(--fonte-texto);
+  /* A Raleway desenha números "baixinhos" por padrão; isto deixa todos da mesma altura. */
+  font-variant-numeric: lining-nums;
+  color: var(--texto);
+  background: var(--fundo);
+  line-height: 1.5;
+  -webkit-font-smoothing: antialiased;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: var(--fundo);
+}
+
+h1,
+h2,
+h3 {
+  font-family: var(--fonte-titulo);
+  color: var(--azul);
+  line-height: 1.2;
+}
+
+a {
+  color: inherit;
+}
+
+button,
+input,
+textarea {
+  font: inherit;
+}
+
+code,
+pre {
+  font-family: var(--fonte-codigo);
+}

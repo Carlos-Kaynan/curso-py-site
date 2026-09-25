@@ -1,0 +1,631 @@
+/* ---------- Topo ---------- */
+.topo {
+  background: var(--azul);
+  padding: 14px 24px;
+}
+
+.logo {
+  font-family: var(--fonte-titulo);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #fff;
+  text-decoration: none;
+}
+
+.logo span {
+  color: var(--dourado);
+}
+
+/* ---------- Páginas de lista (Início e Assunto) ---------- */
+.pagina {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 32px 16px 64px;
+}
+
+.pagina h1 {
+  font-size: clamp(1.8rem, 5vw, 2.6rem);
+  margin: 0 0 4px;
+}
+
+.subtitulo {
+  color: var(--dourado-texto);
+  margin: 0 0 24px;
+}
+
+.voltar {
+  display: inline-block;
+  margin-bottom: 12px;
+  color: var(--texto-suave);
+  text-decoration: none;
+  font-weight: 600;
+}
+
+.voltar:hover {
+  color: var(--azul);
+}
+
+.cartao {
+  background: var(--cartao);
+  border-radius: var(--raio);
+  box-shadow: var(--sombra);
+  padding: 8px 24px;
+}
+
+.vazio {
+  color: var(--texto-suave);
+  padding: 16px 0;
+}
+
+/* Barra de busca */
+.busca {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  background: #ececef;
+  border-radius: var(--raio);
+  padding: 12px 20px;
+  margin-bottom: 32px;
+  color: var(--azul);
+}
+
+.busca svg {
+  width: 22px;
+  height: 22px;
+  flex-shrink: 0;
+}
+
+.busca input {
+  flex: 1;
+  min-width: 0;
+  border: none;
+  background: transparent;
+  outline: none;
+  font-size: 1rem;
+}
+
+/* Linhas clicáveis (assuntos e resultados da busca) */
+.linha-lista {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  padding: 20px 8px;
+  border-bottom: 1px solid var(--dourado);
+  text-decoration: none;
+  transition: background 0.15s;
+}
+
+.linha-lista:last-child {
+  border-bottom: none;
+}
+
+.linha-lista:hover {
+  background: #fdf8ea;
+}
+
+.linha-titulo {
+  display: block;
+  font-size: 1.25rem;
+  font-weight: 700;
+}
+
+.linha-detalhe {
+  display: block;
+  color: var(--texto-suave);
+  font-size: 0.9rem;
+}
+
+.linha-lado {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-shrink: 0;
+}
+
+.contador {
+  color: var(--texto-suave);
+  font-weight: 600;
+}
+
+/* Ícone de status */
+.icone-status {
+  width: 24px;
+  height: 24px;
+  display: block;
+}
+
+.icone-status.resolvida {
+  color: var(--verde);
+}
+
+.icone-status.pendente {
+  color: #c9c9d0;
+}
+
+/* Selo de dificuldade */
+.dificuldade {
+  display: inline-block;
+  min-width: 96px;
+  padding: 6px 12px;
+  border-radius: 8px;
+  color: #fff;
+  font-weight: 700;
+  font-size: 0.85rem;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.dificuldade-facil {
+  background: var(--verde);
+}
+
+.dificuldade-medio {
+  background: var(--laranja);
+}
+
+.dificuldade-dificil {
+  background: var(--vermelho);
+}
+
+/* Tabela de questões */
+.tabela-questoes {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.tabela-questoes th {
+  text-align: center;
+  font-weight: 500;
+  color: var(--texto-suave);
+  padding: 16px 8px 8px;
+}
+
+.tabela-questoes th:first-child {
+  text-align: left;
+}
+
+.tabela-questoes td {
+  padding: 16px 8px;
+  border-bottom: 1px solid var(--dourado);
+  text-align: center;
+}
+
+.tabela-questoes td:first-child {
+  text-align: left;
+}
+
+.tabela-questoes td .icone-status {
+  margin: 0 auto;
+}
+
+.tabela-questoes tbody tr:last-child td {
+  border-bottom: none;
+}
+
+.tabela-questoes tr.aberta td {
+  border-bottom: none;
+}
+
+.botao-titulo {
+  border: none;
+  background: none;
+  padding: 0;
+  cursor: pointer;
+  text-align: left;
+  font-size: 1.15rem;
+  font-weight: 700;
+  color: var(--texto);
+}
+
+.botao-titulo:hover {
+  color: var(--azul-claro);
+  text-decoration: underline;
+}
+
+.peso {
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+.tabela-questoes tr.detalhe td {
+  text-align: left;
+  padding: 0 8px 24px;
+}
+
+.detalhe-topo {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+/* ---------- Botões ---------- */
+.botao {
+  display: inline-block;
+  padding: 10px 22px;
+  border: 1.5px solid var(--azul);
+  border-radius: 8px;
+  background: #fff;
+  color: var(--azul);
+  font-weight: 600;
+  text-decoration: none;
+  cursor: pointer;
+  transition: transform 0.1s, box-shadow 0.15s;
+}
+
+.botao:hover:not(:disabled) {
+  box-shadow: 0 4px 12px rgba(22, 40, 74, 0.2);
+}
+
+.botao:active:not(:disabled) {
+  transform: translateY(1px);
+}
+
+.botao:disabled {
+  opacity: 0.55;
+  cursor: wait;
+}
+
+.botao-principal {
+  background: var(--azul);
+  color: #fff;
+}
+
+/* ---------- Enunciado ---------- */
+.enunciado h3 {
+  font-size: 1.3rem;
+  margin: 24px 0 8px;
+}
+
+.enunciado p {
+  margin: 0 0 8px;
+}
+
+.texto-enunciado {
+  white-space: pre-line;
+}
+
+.bloco-destaque {
+  border-left: 6px solid var(--dourado);
+  padding: 4px 16px;
+  margin: 8px 0 12px;
+  font-weight: 600;
+  overflow-wrap: anywhere;
+}
+
+.bloco-destaque p {
+  margin: 6px 0;
+}
+
+.enunciado ul {
+  margin: 0;
+  padding-left: 20px;
+}
+
+.exemplo {
+  margin-bottom: 16px;
+}
+
+.exemplo-titulo {
+  color: var(--texto-suave);
+}
+
+.exemplo-colunas {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 12px;
+}
+
+.exemplo-colunas.tres {
+  grid-template-columns: repeat(3, 1fr);
+}
+
+.exemplo-colunas span {
+  display: block;
+  font-weight: 700;
+  margin-bottom: 4px;
+}
+
+.exemplo-colunas pre,
+.detalhe-falha pre {
+  margin: 0;
+  background: #f1f1f4;
+  border-radius: 10px;
+  padding: 12px;
+  font-size: 0.9rem;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+  min-height: 44px;
+}
+
+/* ---------- Tela de resolver ---------- */
+.resolver {
+  display: grid;
+  grid-template-columns: minmax(0, 5fr) minmax(0, 7fr);
+  gap: 24px;
+  padding: 24px;
+  max-width: 1600px;
+  margin: 0 auto;
+}
+
+.painel-enunciado {
+  background: var(--cartao);
+  border-radius: var(--raio);
+  box-shadow: var(--sombra);
+  border-right: 6px solid var(--dourado);
+  padding: 24px 32px 32px;
+  align-self: start;
+  position: sticky;
+  top: 16px;
+  max-height: calc(100vh - 32px);
+  overflow-y: auto;
+}
+
+.titulo-questao {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.titulo-questao h1 {
+  font-size: 1.9rem;
+  margin: 0;
+}
+
+.meta {
+  color: var(--texto-suave);
+  margin: 8px 0 0;
+}
+
+.painel-codigo {
+  min-width: 0;
+}
+
+.barra-ferramentas {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  flex-wrap: wrap;
+  margin-bottom: 12px;
+}
+
+.linguagem {
+  padding: 8px 16px;
+  border: 1.5px solid var(--azul);
+  border-radius: 8px;
+  font-weight: 600;
+  background: #fff;
+}
+
+.status-python {
+  font-size: 0.9rem;
+  color: var(--texto-suave);
+}
+
+.status-python.ok {
+  color: var(--verde);
+}
+
+.status-python.erro {
+  color: var(--vermelho);
+}
+
+.botoes {
+  display: flex;
+  gap: 8px;
+  margin-left: auto;
+  flex-wrap: wrap;
+}
+
+/* Editor de código (CodeMirror) */
+.editor {
+  height: 420px;
+  border-radius: var(--raio);
+  overflow: hidden;
+  box-shadow: var(--sombra);
+  background: #fff;
+}
+
+.editor > div {
+  height: 100%;
+}
+
+.editor .cm-editor {
+  font-size: 15px;
+}
+
+.editor .cm-gutters {
+  background: var(--dourado);
+  color: var(--azul);
+  border: none;
+}
+
+.editor .cm-activeLineGutter {
+  background: #e5b23a;
+}
+
+.editor .cm-activeLine {
+  background: #fdf3d6;
+}
+
+/* Console */
+.titulo-console {
+  font-size: 1.5rem;
+  margin: 28px 0 4px;
+}
+
+.dica-console {
+  color: var(--texto-suave);
+  margin: 0 0 12px;
+  font-size: 0.95rem;
+}
+
+.console {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  background: var(--cartao);
+  border-radius: var(--raio);
+  box-shadow: var(--sombra);
+  padding: 16px 24px 24px;
+  gap: 24px;
+}
+
+.console > * + * {
+  border-left: 2px solid var(--dourado);
+  padding-left: 24px;
+}
+
+.console span {
+  display: block;
+  font-size: 1.15rem;
+  font-weight: 600;
+  margin-bottom: 6px;
+}
+
+.console textarea,
+.console pre {
+  width: 100%;
+  min-height: 140px;
+  margin: 0;
+  font-family: var(--fonte-codigo);
+  font-size: 0.95rem;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+
+.console textarea {
+  resize: vertical;
+  border: 1px solid var(--borda);
+  border-radius: 8px;
+  padding: 8px;
+}
+
+.com-erro {
+  color: var(--vermelho);
+}
+
+/* Resultado do Enviar */
+.resultado {
+  margin-top: 16px;
+  padding: 16px 24px;
+  border-radius: var(--raio);
+  background: var(--cartao);
+  box-shadow: var(--sombra);
+  border-left: 6px solid var(--azul);
+}
+
+.resultado.aceito {
+  border-left-color: var(--verde);
+  background: #eef8f1;
+}
+
+.resultado.reprovado {
+  border-left-color: var(--vermelho);
+}
+
+.resultado-titulo {
+  font-weight: 700;
+  font-size: 1.1rem;
+  margin: 0;
+}
+
+.lista-casos {
+  list-style: none;
+  padding: 0;
+  margin: 12px 0 0;
+}
+
+.lista-casos li {
+  padding: 6px 0;
+}
+
+.caso-ok {
+  color: var(--verde);
+  font-weight: 600;
+}
+
+.caso-erro {
+  color: var(--vermelho);
+  font-weight: 600;
+}
+
+.detalhe-falha {
+  margin: 8px 0 8px 20px;
+  display: grid;
+  gap: 8px;
+}
+
+.dica {
+  color: var(--texto-suave);
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+/* ---------- Celular e telas pequenas ---------- */
+@media (max-width: 900px) {
+  .resolver {
+    grid-template-columns: 1fr;
+    padding: 16px;
+  }
+
+  .painel-enunciado {
+    position: static;
+    max-height: none;
+    border-right: none;
+    border-top: 6px solid var(--dourado);
+    padding: 20px;
+  }
+
+  .editor {
+    height: 340px;
+  }
+}
+
+@media (max-width: 600px) {
+  .cartao {
+    padding: 4px 12px;
+  }
+
+  .tabela-questoes th:nth-child(4),
+  .tabela-questoes td.peso {
+    display: none;
+  }
+
+  .dificuldade {
+    min-width: 0;
+    padding: 4px 8px;
+    font-size: 0.75rem;
+  }
+
+  .botao-titulo {
+    font-size: 1rem;
+  }
+
+  .exemplo-colunas,
+  .exemplo-colunas.tres,
+  .console {
+    grid-template-columns: 1fr;
+  }
+
+  .console > * + * {
+    border-left: none;
+    padding-left: 0;
+    border-top: 2px solid var(--dourado);
+    padding-top: 16px;
+  }
+
+  .botoes {
+    margin-left: 0;
+    width: 100%;
+  }
+
+  .botoes .botao {
+    flex: 1;
+    padding: 10px 8px;
+  }
+}
