@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import { Link } from 'react-router-dom'
-import BannerEUA from '../components/BannerEUA.jsx'
+import BannerEstudo from '../components/BannerEstudo.jsx'
 import Dificuldade from '../components/Dificuldade.jsx'
 import IconeStatus from '../components/IconeStatus.jsx'
 import { assuntos, chaveDaQuestao } from '../data/assuntos.js'
@@ -28,11 +28,11 @@ export default function Inicio() {
 
   return (
     <div className="pagina">
-      <BannerEUA>
+      <BannerEstudo>
         <p className="banner-selo">★ Python do básico ao avançado{' '}★</p>
         <h1>Curso_Py</h1>
         <p>Escolha um assunto, resolva as questões e confira na hora se acertou.</p>
-      </BannerEUA>
+      </BannerEstudo>
 
       {/* Destaque da teoria: fica entre o banner e as questões, para ser a primeira coisa que o aluno vê. */}
       <section className="destaque-teoria">

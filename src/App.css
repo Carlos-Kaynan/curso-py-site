@@ -60,51 +60,21 @@
   min-height: 380px;
   margin-bottom: 28px;
   border-radius: var(--raio);
-  background: var(--azul);
-  box-shadow: var(--sombra);
+  /* A moldura de madeira da lousa é uma borda grossa marrom com sombra por dentro. */
+  border: 12px solid #8a5a33;
+  background: #2e4a3e;
+  box-shadow:
+    var(--sombra),
+    inset 0 0 0 3px #6e4526,
+    inset 0 0 40px rgba(0, 0, 0, 0.35);
 }
 
-.banner-bandeira,
-.banner-brilho,
-.banner-escurecer {
+/* A lousa (fundo) ocupa o banner inteiro, atrás de tudo. */
+.banner-fundo {
   position: absolute;
   inset: 0;
   width: 100%;
   height: 100%;
-}
-
-/* Um reflexo de luz passando devagar dá a impressão de a bandeira balançar. */
-.banner-brilho {
-  background: linear-gradient(
-    100deg,
-    transparent 20%,
-    rgba(255, 255, 255, 0.22) 35%,
-    transparent 50%,
-    rgba(0, 0, 0, 0.12) 65%,
-    transparent 80%
-  );
-  background-size: 250% 100%;
-  animation: bandeira-balancando 7s ease-in-out infinite alternate;
-}
-
-@keyframes bandeira-balancando {
-  from {
-    background-position: 100% 0;
-  }
-  to {
-    background-position: 0% 0;
-  }
-}
-
-@media (prefers-reduced-motion: reduce) {
-  .banner-brilho {
-    animation: none;
-  }
-}
-
-/* Escurece um pouco a bandeira para o texto e os desenhos aparecerem melhor. */
-.banner-escurecer {
-  background: linear-gradient(180deg, rgba(31, 30, 77, 0.35) 0%, rgba(31, 30, 77, 0.55) 100%);
 }
 
 .banner-texto {
@@ -192,7 +162,7 @@
   color: #ffd1d6;
 }
 
-.banner-horizonte {
+.banner-cena {
   position: relative;
   display: block;
   width: 100%;

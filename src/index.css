@@ -1,5 +1,6 @@
 /* Cores e fontes usadas no site inteiro ("variáveis" de CSS).
-   As cores principais são as oficiais da bandeira dos Estados Unidos. */
+   As cores principais são as oficiais da bandeira dos Estados Unidos.
+   (O banner da tela inicial usa também o azul e o amarelo do Python.) */
 :root {
   --azul: #3c3b6e; /* "Old Glory Blue" */
   --azul-escuro: #1f1e4d;

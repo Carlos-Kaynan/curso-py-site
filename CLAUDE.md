@@ -36,5 +36,5 @@ npm run lint
 - Rotas com `HashRouter` (funciona no GitHub Pages sem configuração); `vite.config.js` usa `base: './'` e `worker.format: 'es'`.
 - Progresso em `localStorage` (`src/progresso.js`), com as chaves `curso-py:resolvidas`, `curso-py:licoes-lidas` e `curso-py:codigo:<assunto>/<questao>`.
 - Teoria: lições em `src/data/teoria/*.js` como listas de blocos (`titulo`, `texto`, `lista`, `codigo`, `dica`, `cuidado`, `resumo`; formato documentado em `01-primeiros-passos.js`). Texto aceita `código` e **negrito** (`TextoRico.jsx`). Blocos de código são coloridos com `@lezer/python` + `@lezer/highlight` (`BlocoCodigo.jsx`), sem carregar o CodeMirror. `scripts/conferir-teoria.mjs` roda cada exemplo no Pyodide e compara com a `saida` escrita (em `erro: true`, compara com a última linha do traceback).
-- Visual com tema dos EUA: cores em variáveis no começo de `src/index.css`; fontes Bebas Neue (títulos) + Inter (texto); banner SVG em `src/components/BannerEUA.jsx`.
+- Visual com tema dos EUA: cores em variáveis no começo de `src/index.css`; fontes Bebas Neue (títulos) + Inter (texto) + Caveat (letras de giz). Banner da tela inicial em SVG em `src/components/BannerEstudo.jsx`: lousa ao fundo e mesa de estudo com livros, símbolo do Python, notebook e cobra de óculos.
 - Páginas `Questao`, `Teoria` e `Licao` são carregadas com `React.lazy` (ver `App.jsx`).
