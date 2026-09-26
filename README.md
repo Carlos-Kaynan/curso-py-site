@@ -10,6 +10,7 @@ As questões vêm do repositório [Curso_Py](https://github.com/Carlos-Kaynan/Cu
 - **Executar** roda o código com a entrada digitada no console.
 - **Enviar** roda o código em todos os casos de teste (exemplos + ocultos) e compara a saída com a esperada.
 - O progresso (questões resolvidas, lições lidas e o código de cada questão) fica salvo no navegador (`localStorage`).
+- **Código do dia** (tela inicial): um código curto diferente a cada dia, com a explicação de cada linha, o desafio "Qual é a saída?" e o botão Executar.
 - **Estudar teoria** (`/teoria`): 7 lições para ler, do "Olá, mundo!" até funções, cada uma terminando com um atalho para a lista de exercícios do assunto.
 
 ## Comandos
@@ -18,7 +19,7 @@ As questões vêm do repositório [Curso_Py](https://github.com/Carlos-Kaynan/Cu
 npm install        # instala as dependências
 npm run dev        # servidor de desenvolvimento em http://localhost:5173
 npm run questoes   # gera src/data/questoes.json a partir da pasta questoes/
-npm run teoria     # confere se as saídas dos exemplos das lições estão certas
+npm run teoria     # confere as saídas dos exemplos das lições e dos códigos do dia
 npm run build      # gera o site pronto em dist/
 npm run preview    # serve o dist/ localmente
 npm run lint       # procura erros no código
@@ -35,6 +36,11 @@ npm run lint       # procura erros no código
 1. Copie um arquivo de `src/data/teoria/` e troque o conteúdo. O formato dos blocos está explicado no começo de `01-primeiros-passos.js`.
 2. Importe a lição nova em `src/data/teoria/index.js` e coloque na lista, na ordem certa.
 3. Rode `npm run teoria`: o script executa cada exemplo de código e avisa se alguma saída escrita na lição estiver errada.
+
+## Como adicionar um Código do dia
+
+1. Acrescente um item em `src/data/codigosDoDia.js`: as linhas (código + explicação), a saída certa e duas saídas erradas.
+2. Rode `npm run teoria`: ele confere se a saída certa está certa e se as erradas são diferentes dela.
 
 ## Estrutura
 

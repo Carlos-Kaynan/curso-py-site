@@ -170,6 +170,258 @@
   margin-top: 12px;
 }
 
+/* ---------- Código do dia (faixa azul na tela inicial) ---------- */
+.codigo-dia {
+  display: grid;
+  grid-template-columns: minmax(0, 2fr) minmax(0, 3fr);
+  gap: 32px;
+  align-items: center;
+  margin-bottom: 28px;
+  padding: 36px;
+  border-radius: var(--raio);
+  /* Estrelinhas: um "pontinho" branco repetido a cada 28px, por cima do azul. */
+  background:
+    radial-gradient(rgba(255, 255, 255, 0.09) 1.5px, transparent 1.5px) 0 0 / 28px 28px,
+    linear-gradient(135deg, var(--azul) 0%, var(--azul-escuro) 100%);
+  box-shadow: var(--sombra);
+  color: #fff;
+}
+
+/* Espaço reservado enquanto o Código do dia carrega, para a página não "pular". */
+.codigo-dia-carregando {
+  min-height: 560px;
+}
+
+.codigo-dia-texto h2 {
+  margin: 0 0 12px;
+  font-size: clamp(2.6rem, 6vw, 3.6rem);
+  color: #fff;
+}
+
+.codigo-dia-texto p {
+  margin: 0 0 24px;
+  font-size: 1.05rem;
+  color: #dcdef2;
+}
+
+.codigo-dia-cartao {
+  padding: 24px 26px 20px;
+  border-radius: 18px;
+  border-bottom: 8px solid var(--vermelho);
+  background: #fff;
+  color: var(--texto);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.25);
+}
+
+.codigo-dia-topo {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+}
+
+.codigo-dia-numero {
+  flex-shrink: 0;
+  display: grid;
+  place-items: center;
+  width: 52px;
+  height: 52px;
+  border-radius: 50%;
+  background: var(--vermelho);
+  color: #fff;
+  font-family: var(--fonte-titulo);
+  font-size: 1.8rem;
+}
+
+.codigo-dia-titulo {
+  margin: 0;
+  font-family: var(--fonte-titulo);
+  font-size: 2rem;
+  line-height: 1.05;
+  letter-spacing: 0.02em;
+  color: var(--azul);
+}
+
+.codigo-dia-etiquetas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: 14px 0 18px;
+}
+
+.etiqueta {
+  padding: 5px 14px;
+  border: 1px solid var(--borda);
+  border-radius: 999px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--texto-suave);
+}
+
+.etiqueta-basico {
+  border-color: transparent;
+  background: #d9f2e3;
+  color: #1d6b3f;
+}
+
+.etiqueta-medio {
+  border-color: transparent;
+  background: #fbe7a1;
+  color: #6b5200;
+}
+
+/* Cada linha de código com a explicação embaixo, como a fala e a tradução. */
+.codigo-dia-linhas {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.codigo-dia-linhas li {
+  display: grid;
+  justify-items: start;
+  gap: 4px;
+  margin-bottom: 12px;
+}
+
+.linha-codigo {
+  max-width: 100%;
+  overflow-x: auto;
+  padding: 6px 12px;
+  border-radius: 8px;
+  background: #2a2960;
+  color: #eceefb;
+  font-size: 0.92rem;
+  white-space: pre;
+}
+
+.linha-explicacao {
+  padding-left: 4px;
+  font-size: 0.92rem;
+  color: var(--texto-suave);
+}
+
+.linha-explicacao code {
+  padding: 1px 5px;
+  border-radius: 5px;
+  background: var(--azul-fundo);
+  color: var(--azul);
+  font-size: 0.9em;
+}
+
+/* Desafio "Qual é a saída?" */
+.desafio {
+  margin-top: 16px;
+  padding-top: 14px;
+  border-top: 1px dashed var(--vermelho-claro);
+}
+
+.desafio-pergunta {
+  margin: 0 0 10px;
+  font-weight: 700;
+  color: var(--azul);
+}
+
+.desafio-opcoes {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+}
+
+.opcao {
+  padding: 10px 12px;
+  border: 2px solid var(--borda);
+  border-radius: 10px;
+  background: #f3f4f8;
+  color: var(--texto);
+  text-align: left;
+  cursor: pointer;
+  transition: border-color 0.15s, background 0.15s, opacity 0.15s;
+}
+
+.opcao pre {
+  margin: 0;
+  font-size: 0.9rem;
+  white-space: pre-wrap;
+  overflow-wrap: anywhere;
+}
+
+.opcao:hover:not(:disabled) {
+  border-color: var(--azul);
+  background: var(--azul-fundo);
+}
+
+.opcao:disabled {
+  cursor: default;
+}
+
+.opcao.certa {
+  border-color: var(--verde);
+  background: #e3f5ea;
+}
+
+.opcao.errada {
+  border-color: var(--vermelho);
+  background: #fdf0f2;
+}
+
+.opcao.apagada {
+  opacity: 0.5;
+}
+
+.desafio-resultado {
+  min-height: 1.5em;
+  margin: 10px 0 0;
+  font-weight: 600;
+}
+
+.codigo-dia-saida {
+  margin-top: 12px;
+  padding: 10px 14px;
+  border-radius: 10px;
+  background: #f0f1f7;
+}
+
+.codigo-dia-saida span {
+  font-size: 0.78rem;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: var(--texto-suave);
+}
+
+.codigo-dia-saida pre {
+  margin: 4px 0 0;
+  font-size: 0.95rem;
+  white-space: pre-wrap;
+}
+
+.codigo-dia-saida.com-erro {
+  background: #fdf0f2;
+}
+
+.codigo-dia-botoes {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px;
+  margin-top: 16px;
+}
+
+.botao-branco {
+  border-color: #fff;
+  background: #fff;
+  color: var(--azul);
+}
+
+.botao-contorno {
+  border-color: rgba(255, 255, 255, 0.85);
+  background: transparent;
+  color: #fff;
+}
+
+.botao-contorno:hover:not(:disabled) {
+  background: rgba(255, 255, 255, 0.12);
+}
+
 /* ---------- Páginas de lista (Início e Assunto) ---------- */
 .pagina {
   max-width: 1000px;
@@ -987,29 +1239,29 @@
 }
 
 /* Cores do código (classes criadas pelo @lezer/highlight) */
-.bloco-codigo-fonte .tok-keyword {
+.codigo-escuro .tok-keyword {
   color: #ff9aa9;
   font-weight: 600;
 }
 
-.bloco-codigo-fonte .tok-string,
-.bloco-codigo-fonte .tok-string2 {
+.codigo-escuro .tok-string,
+.codigo-escuro .tok-string2 {
   color: #a9e5a0;
 }
 
-.bloco-codigo-fonte .tok-number,
-.bloco-codigo-fonte .tok-bool,
-.bloco-codigo-fonte .tok-null,
-.bloco-codigo-fonte .tok-atom {
+.codigo-escuro .tok-number,
+.codigo-escuro .tok-bool,
+.codigo-escuro .tok-null,
+.codigo-escuro .tok-atom {
   color: #ffd479;
 }
 
-.bloco-codigo-fonte .tok-comment {
+.codigo-escuro .tok-comment {
   color: #a3a7d4;
   font-style: italic;
 }
 
-.bloco-codigo-fonte .tok-definition {
+.codigo-escuro .tok-definition {
   color: #8fd0ff;
 }
 
@@ -1104,6 +1356,12 @@
     grid-template-columns: 1fr;
   }
 
+  /* O Código do dia vira uma coluna: texto em cima, cartão embaixo. */
+  .codigo-dia {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
   /* No celular, o menu de lições vira só o link "Todas as lições". */
   .licao-menu {
     position: static;
@@ -1135,6 +1393,35 @@
 @media (max-width: 600px) {
   .topo {
     padding: 10px 16px;
+  }
+
+  .codigo-dia {
+    padding: 24px 16px;
+  }
+
+  .codigo-dia-cartao {
+    padding: 20px 16px 16px;
+  }
+
+  .codigo-dia-titulo {
+    font-size: 1.7rem;
+  }
+
+  .desafio-opcoes {
+    grid-template-columns: 1fr;
+  }
+
+  .codigo-dia-botoes .botao {
+    flex: 1;
+    padding: 12px 10px;
+    text-align: center;
+    white-space: nowrap;
+  }
+
+  /* No celular, linhas de código compridas quebram em vez de sair do cartão. */
+  .linha-codigo {
+    white-space: pre-wrap;
+    overflow-wrap: anywhere;
   }
 
   .logo {

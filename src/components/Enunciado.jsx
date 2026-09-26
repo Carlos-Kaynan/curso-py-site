@@ -4,7 +4,7 @@ function BlocoDestaque({ itens }) {
   return (
     <div className="bloco-destaque">
       {itens.map((item, i) => (
-        <p key={i}>{item || ' '}</p>
+        <p key={i}>{item || '\u00a0'}</p>
       ))}
     </div>
   )

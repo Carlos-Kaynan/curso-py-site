@@ -1,19 +1,17 @@
-import { useState } from 'react'
-import { classHighlighter, highlightCode } from '@lezer/highlight'
-import { parser } from '@lezer/python'
+import { Fragment, useState } from 'react'
+import { colorirPython } from '../utils/colorirPython.js'
 
-// Pinta o código Python com as mesmas regras do editor, mas sem carregar o editor:
-// cada pedaço (palavra-chave, texto, número...) ganha uma classe CSS "tok-...".
-function colorir(codigo) {
-  const pedacos = []
-  highlightCode(
-    codigo,
-    parser.parse(codigo),
-    classHighlighter,
-    (texto, classes) => pedacos.push(classes ? <span key={pedacos.length} className={classes}>{texto}</span> : texto),
-    () => pedacos.push('\n'),
+// Uma linha de código colorida: cada pedaço vira um <span> com a classe de cor dele.
+export function LinhaColorida({ pedacos }) {
+  return pedacos.map((pedaco, i) =>
+    pedaco.classes ? (
+      <span key={i} className={pedaco.classes}>
+        {pedaco.texto}
+      </span>
+    ) : (
+      pedaco.texto
+    ),
   )
-  return pedacos
 }
 
 export default function BlocoCodigo({ codigo, saida, entrada, erro }) {
@@ -37,8 +35,15 @@ export default function BlocoCodigo({ codigo, saida, entrada, erro }) {
           {copiado ? 'Copiado!' : 'Copiar'}
         </button>
       </div>
-      <pre className="bloco-codigo-fonte">
-        <code>{colorir(codigo)}</code>
+      <pre className="bloco-codigo-fonte codigo-escuro">
+        <code>
+          {colorirPython(codigo).map((linha, i) => (
+            <Fragment key={i}>
+              {i > 0 && '\n'}
+              <LinhaColorida pedacos={linha} />
+            </Fragment>
+          ))}
+        </code>
       </pre>
       {entrada && (
         <div className="bloco-codigo-entrada">

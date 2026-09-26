@@ -1,4 +1,4 @@
-import { useState } from 'react'
+import { lazy, Suspense, useState } from 'react'
 import { Link } from 'react-router-dom'
 import BannerEstudo from '../components/BannerEstudo.jsx'
 import Dificuldade from '../components/Dificuldade.jsx'
@@ -6,11 +6,15 @@ import IconeStatus from '../components/IconeStatus.jsx'
 import { assuntos, chaveDaQuestao } from '../data/assuntos.js'
 import { estaResolvida } from '../progresso.js'
 
+// O Código do dia traz o colorido de código Python; com lazy(), ele é baixado
+// logo depois do resto da página, sem atrasar a abertura da tela inicial.
+const CodigoDoDia = lazy(() => import('../components/CodigoDoDia.jsx'))
+
 // Tira acentos e deixa minúsculo, para "funcao" achar "Funções".
 const simplificar = (texto) =>
   texto
     .normalize('NFD')
-    .replace(/[̀-ͯ]/g, '')
+    .replace(/[\u0300-\u036f]/g, '')
     .toLowerCase()
 
 export default function Inicio() {
@@ -29,7 +33,7 @@ export default function Inicio() {
   return (
     <div className="pagina">
       <BannerEstudo>
-        <p className="banner-selo">★ Python do básico ao avançado{' '}★</p>
+        <p className="banner-selo">★ Python do básico ao avançado{'\u00a0'}★</p>
         <h1>Curso_Py</h1>
         <p>Escolha um assunto, resolva as questões e confira na hora se acertou.</p>
       </BannerEstudo>
@@ -50,6 +54,10 @@ export default function Inicio() {
           Estudar teoria →
         </Link>
       </section>
+
+      <Suspense fallback={<div className="codigo-dia codigo-dia-carregando" />}>
+        <CodigoDoDia />
+      </Suspense>
 
       <label className="busca">
         <svg viewBox="0 0 24 24" aria-hidden="true">
